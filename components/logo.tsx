@@ -1,3 +1,6 @@
+import Image from 'next/image'
+
+
 export function Logo({ size = "default" }: { size?: "small" | "default" | "large" }) {
   const dimensions = {
     small: { width: 32, height: 32, text: "text-lg" },
@@ -9,36 +12,16 @@ export function Logo({ size = "default" }: { size?: "small" | "default" | "large
 
   return (
     <div className="flex items-center gap-3">
-      <div className={`relative photo-border`} style={{ width, height }}>
-        {/* Vintage polaroid-style background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-pink-300 rounded-sm" />
-        <div className="absolute inset-1 bg-gradient-to-br from-blue-200 to-yellow-200 rounded-sm opacity-80" />
-        {/* Book icon */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg
-            width={width * 0.5}
-            height={height * 0.5}
-            viewBox="0 0 24 24"
-            fill="none"
-            className="text-gray-700 drop-shadow-sm"
-          >
-            <path
-              d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path d="M8 7h8M8 11h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          </svg>
-        </div>
+      {/* Logo Image - simples, sem efeitos de polaroid */}
+      <div className="relative" style={{ width, height }}>
+        <Image
+          src="/images/logo.jpg"
+          alt="Hu's Your Teacher Logo"
+          fill={true}
+          sizes={`${Math.max(width, height)}px`}
+          className="object-cover rounded-sm"
+          priority
+        />
       </div>
     </div>
   )

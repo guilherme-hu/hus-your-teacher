@@ -5,72 +5,214 @@ import { Download, Heart, Users, BookOpen, Star, Globe } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
-import { BackgroundUploader } from "@/components/background-uploader"
 import { VintageStickers } from "@/components/vintage-stickers"
+import { DownloadButton } from "@/components/download-button";
+
 
 export default function HomePage() {
   const learningSheets = [
     {
-      title: "Alfabeto Básico e Fonética",
-      description: "Aprenda letras, sons e pronúncia básica",
+      title: "Welcome Activity",
+      description: "Compartilhe um pouco de você com esta atividade de boas-vindas!",
       level: "Iniciante",
-      downloads: 1250,
       icon: "🔤",
+      filePath: "/downloads/Welcome Activity.pdf"
     },
     {
-      title: "Vocabulário Comum",
-      description: "Palavras essenciais para conversas do dia a dia",
+      title: "Animals",
+      description: "Aprenda como nomear alguns animais em inglês.",
       level: "Iniciante",
-      downloads: 980,
       icon: "💬",
+      filePath: "/downloads/Animals.pdf"
     },
     {
-      title: "Regras Gramaticais Simples",
-      description: "Estrutura básica de frases e gramática",
-      level: "Intermediário",
-      downloads: 750,
+      title: "Verb “To Be”",
+      description: "Regras gramaticais para o verbo “to be” ",
+      level: "Iniciante",
       icon: "📝",
+      filePath: "/downloads/Verb to be.pdf"
     },
     {
-      title: "Compreensão de Leitura",
-      description: "Histórias curtas com perguntas e atividades",
-      level: "Intermediário",
-      downloads: 620,
+      title: "Practice Verb “To Be”",
+      description: "Pratique o que você aprendeu na última aula! ",
+      level: "Iniciante",
       icon: "📖",
+      filePath: "/downloads/Practice Verb to be.pdf"
     },
     {
-      title: "Iniciadores de Conversa",
-      description: "Diálogos práticos e exercícios de fala",
-      level: "Avançado",
-      downloads: 540,
+      title: "Classroom Vocabulary",
+      description: "Vocabulário sobre sala de aula",
+      level: "Iniciante",
       icon: "🗣️",
+      filePath: "/downloads/Classroom Vocabulary.pdf"
     },
     {
-      title: "Folhas de Escrita",
-      description: "Propostas de escrita criativa e exercícios",
-      level: "Avançado",
-      downloads: 430,
+      title: "Resolutions ",
+      description: "Destaque o que você aprendeu nas últimas 5 aulas e o que foi difícil!",
+      level: "Iniciante",
       icon: "✏️",
+      filePath: "/downloads/Resolutions.pdf"
     },
+    {
+      title: "Simple Present",
+      description: "Regras gramaticais para o tempo verbal Simple Present",
+      level: "Iniciante",
+      icon: "💬",
+      filePath: "/downloads/Simple Present.pdf"
+    },
+    {
+      title: "Simple Present Practice",
+      description: "Pratique a forma afirmativa do Simple Present",
+      level: "Iniciante",
+      icon: "⏰",
+      filePath: "/downloads/Simple Present Practice.pdf"
+    },
+    {
+      title: "Verb “To Do” Practice ",
+      description: "Pratique a colocação do verb “to do” e suas contrações",
+      level: "Iniciante",
+      icon: "👪",
+      filePath: "/downloads/Verb to do Practice.pdf"
+    },
+    {
+      title: "Do, Does & Did",
+      description: "Aprenda as diferenças entre “do”, “does’ e “did”",
+      level: "Iniciante",
+      icon: "🏠",
+      filePath: "/downloads/Do Does Did.pdf"
+    },
+    {
+      title: "Antonyms",
+      description: "Antônimos em inglês",
+      level: "Iniciante",
+      icon: "❌",
+      filePath: "/downloads/Antonyms.pdf"
+    },
+    {
+      title: "Verb “To Like”",
+      description: "Regras gramaticais referentes ao verb “to like”",
+      level: "Iniciante",
+      icon: "❓",
+      filePath: "/downloads/Verb ''To Like''.pdf"
+    },
+    {
+      title: "Progress Check",
+      description: "Complete esta atividade para avaliar o quanto você aprendeu até agora! Não hesite em nos mandá-la para corrigirmos  😉",
+      level: "Iniciante",
+      icon: "💡",
+      filePath: "/downloads/Progress Check.pdf"
+    },
+    {
+      title: "Past Simple",
+      description: "Regras gramaticais para o tempo verbal Past Simple",
+      level: "Iniciante",
+      icon: "📅",
+      filePath: "/downloads/Past Simple.pdf"
+    },
+    {
+      title: "Past Simple Practice",
+      description: "Pratique o que você aprendeu na última aula",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Past Simple Practice.pdf"
+    },
+    {
+      title: "Past Simple Practice 2",
+      description: "Pratique a colocação de verbos no Past Simple",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Past Simple Practice 2.pdf"
+    },
+    {
+      title: "Present Perfect ",
+      description: "Regras gramaticais para o tempo verbal Present Perfect",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Present Perfect.pdf"
+    },
+    {
+      title: "Present Perfect Practice",
+      description: "Pratique o que você aprendeu na última aula",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Present Perfect Practice.pdf"
+    },
+    {
+      title: "Reading Comprehension",
+      description: "Atividade de compreensão de leitura em inglês",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Reading Comprehension.pdf"
+    },
+    {
+      title: "Verb Tenses Review",
+      description: "Revise o quanto você aprendeu sobre tempos verbais até agora!",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Verb Tenses Review.pdf"
+    },
+    {
+      title: "Creative Writing",
+      description: "Produção de texto com os tempos verbais que aprendemos até agora",
+      level: "Iniciante",
+      icon: "⏳",
+      filePath: "/downloads/Creative Writing.pdf"
+    },
+    {
+      title: "Food Idioms",
+      description: "Expressões idiomáticas sobre comida",
+      level: "Iniciante",
+      icon: "⏳",
+      filePath: "/downloads/Food Idioms.pdf"
+    },
+    {
+      title: "Personality Adjectives",
+      description: "Vocabulário sobre adjetivos de personalidade",
+      level: "Iniciante",
+      icon: "🍽️",
+      filePath: "/downloads/Personality Adjectives.pdf"
+    },
+    {
+      title: "Emotional Adjectives",
+      description: "Vocabulário sobre adjetivos que descrevem emoções",
+      level: "Iniciante",
+      icon: "🍕",
+      filePath: "/downloads/Emotional Adjectives.pdf"
+    },
+    {
+      title: "Reading Comprehension 2",
+      description: "Mais uma atividade de compreensão de leitura!",
+      level: "Iniciante",
+      icon: "🥗",
+      filePath: "/downloads/Reading Comprehension 2.pdf"
+    },
+    {
+      title: "Creative Writing 2",
+      description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
+      level: "Iniciante",
+      icon: "🥗",
+      filePath: "/downloads/Creative Writing 2.pdf"
+    },
+
   ]
 
   const teamMembers = [
     {
-      name: "Alex Hu",
+      name: "Jessie Hu",
       role: "Criador de Conteúdo",
       description: "Desenvolve materiais de aprendizado envolventes",
       avatar: "/placeholder.svg?height=100&width=100",
       icon: "🎨",
     },
     {
-      name: "Jamie Hu",
+      name: "Emily Hu",
       role: "Especialista em Educação",
       description: "Garante a eficácia pedagógica",
       avatar: "/placeholder.svg?height=100&width=100",
       icon: "🍎",
     },
     {
-      name: "Sam Hu",
+      name: "Guilherme Hu",
       role: "Tecnologia e Design",
       description: "Constrói e mantém a plataforma",
       avatar: "/placeholder.svg?height=100&width=100",
@@ -80,7 +222,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen crayon-scribbles film-grain dreamy">
-      <BackgroundUploader />
 
       {/* Header */}
       <header className="border-b border-pink-300 bg-pink-50/80 backdrop-blur-sm sticky top-0 z-50">
@@ -102,7 +243,6 @@ export default function HomePage() {
             <Link href="#team" className="text-gray-700 hover:text-pink-600 transition-colors retro-text">
               Equipe 👨‍👩‍👧‍👦
             </Link>
-            <Button className="vintage-btn retro-text">Apoiar 💝</Button>
           </nav>
         </div>
       </header>
@@ -122,6 +262,18 @@ export default function HomePage() {
             </h2>
             <div className="mb-8">
               <p className="text-3xl handwritten italic text-pink-500 mb-4">"Hu cares? We do." 💛</p>
+            </div>
+            <div className="flex justify-center mb-8">
+              <div className="relative" style={{ width: 480, height: 480 }}>
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Hu's Your Teacher Logo"
+                  fill
+                  sizes="280px"
+                  className="object-cover rounded-sm"
+                  priority
+                />
+              </div>
             </div>
             <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed retro-text">
               Free, high-quality English learning materials created with love by three cousins. Perfect for kids, great
@@ -149,7 +301,7 @@ export default function HomePage() {
               <div className="w-20 h-20 bg-green-300 rounded-full flex items-center justify-center mx-auto mb-6 photo-border animate-vintage-glow">
                 <Users className="w-10 h-10 text-gray-700" />
               </div>
-              <h3 className="vintage-heading text-gray-800 mb-3 text-xl">5,000+ Learners 👨‍🎓</h3>
+              <h3 className="vintage-heading text-gray-800 mb-3 text-xl">Independent Learners 👨‍🎓</h3>
               <p className="text-gray-600 retro-text">Students worldwide using our materials</p>
             </div>
             <div className="text-center">
@@ -192,10 +344,6 @@ export default function HomePage() {
                     <Badge variant="secondary" className="text-xs bg-cream-200 text-gray-700 retro-text">
                       {sheet.level}
                     </Badge>
-                    <div className="flex items-center gap-2 text-sm text-gray-600 retro-text">
-                      <Download className="w-4 h-4" />
-                      {sheet.downloads}
-                    </div>
                   </div>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">{sheet.icon}</span>
@@ -204,10 +352,7 @@ export default function HomePage() {
                   <CardDescription className="text-gray-600 retro-text">{sheet.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full vintage-btn retro-text">
-                    <Download className="w-4 h-4 mr-2" />
-                    Baixar PDF 📥
-                  </Button>
+                  <DownloadButton filePath={sheet.filePath} />
                 </CardContent>
               </Card>
             ))}
@@ -219,7 +364,7 @@ export default function HomePage() {
               variant="outline"
               className="border-2 border-pink-400 text-pink-700 hover:bg-pink-50 retro-text photo-border"
             >
-              Ver Todos os Materiais 👀
+              Fique ligado nos materiais futuros! 👀
             </Button>
           </div>
         </div>
@@ -238,8 +383,7 @@ export default function HomePage() {
               </p>
               <p className="text-lg text-gray-700 mb-10 leading-relaxed retro-text">
                 Nossas folhas de trabalho são projetadas pensando nas crianças, mas são perfeitas para aprendizes de
-                todas as idades. Cada folha cobre tópicos importantes de inglês com atividades envolventes e explicações
-                claras. 📝
+                todas as idades. Cada folha cobre tópicos importantes de inglês com atividades e explicações. 📝
               </p>
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3">
@@ -274,7 +418,7 @@ export default function HomePage() {
           <div className="text-center mb-20">
             <h2 className="text-5xl vintage-heading mb-6 text-gray-800">Conheça a Família Hu 👨‍👩‍👧‍👦</h2>
             <p className="text-xl text-gray-600 retro-text">
-              Três primos unidos por uma paixão pela educação e por ajudar outros a aprender inglês. 💕
+              Três primos unidos por uma paixão pela educação e por ajudar outros. 💕
             </p>
           </div>
 
@@ -314,7 +458,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-5xl vintage-heading mb-8 text-white">Pronto para Começar a Aprender? 🚀</h2>
           <p className="text-xl mb-12 text-white/90 retro-text">
-            Junte-se a milhares de aprendizes em todo o mundo que estão melhorando seu inglês com nossos materiais
+            Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais
             gratuitos. 🌍
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -324,14 +468,6 @@ export default function HomePage() {
             >
               <Download className="w-5 h-5 mr-3" />
               Baixe Sua Primeira Folha 📥
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-pink-600 text-lg px-10 py-8 retro-text photo-border"
-            >
-              <Heart className="w-5 h-5 mr-3" />
-              Apoie Nossa Missão 💝
             </Button>
           </div>
         </div>
@@ -373,7 +509,7 @@ export default function HomePage() {
             <div>
               <h4 className="vintage-heading mb-6">Contato 📞</h4>
               <p className="text-yellow-200 mb-3 retro-text">Perguntas ou sugestões? 💭</p>
-              <p className="text-yellow-200 retro-text">ola@husyourteacher.org 📧</p>
+              <p className="text-yellow-200 retro-text">husyouteacher@gmail.com 📧</p>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-12 pt-8 text-center text-yellow-200 retro-text">
