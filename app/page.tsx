@@ -263,8 +263,8 @@ export default function HomePage() {
             <div className="mb-8">
               <p className="text-3xl handwritten italic text-pink-500 mb-4">"Hu cares? We do." 💛</p>
             </div>
-            <div className="flex justify-center mb-8">
-              <div className="relative" style={{ width: 480, height: 480 }}>
+              <div className="flex justify-center mb-8">
+                <div className="relative rounded-full overflow-hidden photo-border" style={{ width: 480, height: 480 }}>
                 <Image
                   src="/images/logo.jpg"
                   alt="Hu's Your Teacher Logo"
