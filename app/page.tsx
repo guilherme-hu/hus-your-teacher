@@ -171,27 +171,27 @@ export default function HomePage() {
       icon: "🍽️",
       filePath: "/downloads/Personality Adjectives.pdf"
     },
-    {
-      title: "Emotional Adjectives",
-      description: "Vocabulário sobre adjetivos que descrevem emoções",
-      level: "Iniciante",
-      icon: "🍕",
-      filePath: "/downloads/Emotional Adjectives.pdf"
-    },
-    {
-      title: "Reading Comprehension 2",
-      description: "Mais uma atividade de compreensão de leitura!",
-      level: "Iniciante",
-      icon: "🥗",
-      filePath: "/downloads/Reading Comprehension 2.pdf"
-    },
-    {
-      title: "Creative Writing 2",
-      description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
-      level: "Iniciante",
-      icon: "🥗",
-      filePath: "/downloads/Creative Writing 2.pdf"
-    },
+    // {
+    //   title: "Emotional Adjectives",
+    //   description: "Vocabulário sobre adjetivos que descrevem emoções",
+    //   level: "Iniciante",
+    //   icon: "🍕",
+    //   filePath: "/downloads/Emotional Adjectives.pdf"
+    // },
+    // {
+    //   title: "Reading Comprehension 2",
+    //   description: "Mais uma atividade de compreensão de leitura!",
+    //   level: "Iniciante",
+    //   icon: "🥗",
+    //   filePath: "/downloads/Reading Comprehension 2.pdf"
+    // },
+    // {
+    //   title: "Creative Writing 2",
+    //   description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
+    //   level: "Iniciante",
+    //   icon: "🥗",
+    //   filePath: "/downloads/Creative Writing 2.pdf"
+    // },
 
   ]
 
