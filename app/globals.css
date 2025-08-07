@@ -94,6 +94,7 @@
     conic-gradient(from 200deg at 70% 30%, transparent 0deg, #f8b4cb 12deg, transparent 25deg);
   opacity: 0.3;
   z-index: 0;
+  pointer-events: none;
 }
 
 .crayon-scribbles::after {
@@ -111,6 +112,7 @@
     radial-gradient(ellipse 160px 35px at 30% 30%, transparent 30%, #b0e0e6 31%, transparent 35%);
   opacity: 0.2;
   z-index: 0;
+  pointer-events: none;
 }
 
 /* Handwritten cursive fonts */

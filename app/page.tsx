@@ -6,7 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { VintageStickers } from "@/components/vintage-stickers"
-import { DownloadButton } from "@/components/download-button";
 
 
 export default function HomePage() {
@@ -282,9 +281,11 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button size="lg" className="vintage-btn text-lg px-10 py-8 retro-text">
-              <Download className="w-5 h-5 mr-3" />
-              Browse Materials 📖
+            <Button size="lg" className="vintage-btn text-lg px-10 py-8 retro-text" asChild>
+              <a href="/downloads/Welcome Activity.pdf" download>
+                <Download className="w-5 h-5 mr-3" />
+                Browse Materials 📖
+              </a>
             </Button>
             <Button
               size="lg"
@@ -352,7 +353,12 @@ export default function HomePage() {
                   <CardDescription className="text-gray-600 retro-text">{sheet.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <DownloadButton filePath={sheet.filePath} />
+                  <Button className="w-full vintage-btn retro-text" asChild>
+                    <a href={sheet.filePath} download>
+                      <Download className="w-4 h-4 mr-2" />
+                      Baixar PDF 📥
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
