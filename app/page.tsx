@@ -150,27 +150,27 @@ export default function HomePage() {
       icon: "🕰️",
       filePath: "/downloads/Verb Tenses Review.pdf"
     },
-    {
-      title: "Creative Writing",
-      description: "Produção de texto com os tempos verbais que aprendemos até agora",
-      level: "Iniciante",
-      icon: "⏳",
-      filePath: "/downloads/Creative Writing.pdf"
-    },
-    {
-      title: "Food Idioms",
-      description: "Expressões idiomáticas sobre comida",
-      level: "Iniciante",
-      icon: "⏳",
-      filePath: "/downloads/Food Idioms.pdf"
-    },
-    {
-      title: "Personality Adjectives",
-      description: "Vocabulário sobre adjetivos de personalidade",
-      level: "Iniciante",
-      icon: "🍽️",
-      filePath: "/downloads/Personality Adjectives.pdf"
-    },
+    // {
+    //   title: "Creative Writing",
+    //   description: "Produção de texto com os tempos verbais que aprendemos até agora",
+    //   level: "Iniciante",
+    //   icon: "⏳",
+    //   filePath: "/downloads/Creative Writing.pdf"
+    // },
+    // {
+    //   title: "Food Idioms",
+    //   description: "Expressões idiomáticas sobre comida",
+    //   level: "Iniciante",
+    //   icon: "⏳",
+    //   filePath: "/downloads/Food Idioms.pdf"
+    // },
+    // {
+    //   title: "Personality Adjectives",
+    //   description: "Vocabulário sobre adjetivos de personalidade",
+    //   level: "Iniciante",
+    //   icon: "🍽️",
+    //   filePath: "/downloads/Personality Adjectives.pdf"
+    // },
     // {
     //   title: "Emotional Adjectives",
     //   description: "Vocabulário sobre adjetivos que descrevem emoções",
