@@ -71,11 +71,11 @@ export default function HomePage() {
       description: "Pratique a colocação do verb “to do” e suas contrações",
       level: "Iniciante",
       icon: "👪",
-      filePath: "/downloads/Verb to do Practice.pdf"
+      filePath: "/downloads/Verb To Do Practice.pdf"
     },
     {
       title: "Do, Does & Did",
-      description: "Aprenda as diferenças entre “do”, “does’ e “did”",
+      description: "Aprenda as diferenças entre “do”, “does” e “did”",
       level: "Iniciante",
       icon: "🏠",
       filePath: "/downloads/Do Does Did.pdf"
