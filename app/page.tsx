@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -9,6 +11,24 @@ import { VintageStickers } from "@/components/vintage-stickers"
 
 
 export default function HomePage() {
+  const [downloads, setDownloads] = useState<Record<string, number>>({});
+  useEffect(() => {
+    fetch("/api/downloads")
+      .then(res => res.json())
+      .then(setDownloads);
+  }, []);
+
+  const handleDownload = async (filePath: string) => {
+    // Atualiza localmente para resposta rápida
+    setDownloads(prev => ({ ...prev, [filePath]: (prev[filePath] || 0) + 1 }));
+    // Atualiza no backend
+    await fetch("/api/downloads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ filePath }),
+    });
+  };
+
   const learningSheets = [
     {
       title: "Welcome Activity",
@@ -198,7 +218,7 @@ export default function HomePage() {
   const teamMembers = [
     {
       name: "Jessie Hu",
-      role: "Criador de Conteúdo",
+      role: "Criadora de Conteúdo",
       description: "Desenvolve materiais de aprendizado envolventes",
       avatar: "/placeholder.svg?height=100&width=100",
       icon: "🎨",
@@ -340,11 +360,18 @@ export default function HomePage() {
                 key={index}
                 className="vintage-card scrapbook-tape hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
               >
-                <CardHeader>
+                <CardHeader className="relative">
                   <div className="flex items-center justify-between mb-3">
                     <Badge variant="secondary" className="text-xs bg-cream-200 text-gray-700 retro-text">
                       {sheet.level}
                     </Badge>
+                    {/* Contador de downloads no canto superior direito */}
+                    {downloads[sheet.filePath] ? (
+                      <span className="absolute top-2 right-3 flex items-center gap-1 bg-white/80 px-2 py-1 rounded-full shadow text-gray-500 text-xs font-semibold retro-text z-10">
+                        <Download className="w-3 h-3 text-gray-400" />
+                        {downloads[sheet.filePath]}
+                      </span>
+                    ) : null}
                   </div>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">{sheet.icon}</span>
@@ -353,7 +380,7 @@ export default function HomePage() {
                   <CardDescription className="text-gray-600 retro-text">{sheet.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full vintage-btn retro-text" asChild>
+                  <Button className="w-full vintage-btn retro-text" asChild onClick={() => handleDownload(sheet.filePath)}>
                     <a href={sheet.filePath} download>
                       <Download className="w-4 h-4 mr-2" />
                       Baixar PDF 📥
