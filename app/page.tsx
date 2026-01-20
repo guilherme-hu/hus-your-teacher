@@ -220,21 +220,21 @@ export default function HomePage() {
       name: "Jessie Hu",
       role: "Criadora de Conteúdo",
       description: "Desenvolve materiais de aprendizado envolventes",
-      avatar: "/placeholder.svg?height=100&width=100",
+      avatar: "/dudu.jpeg?height=100&width=100",
       icon: "🎨",
     },
     {
       name: "Emily Hu",
       role: "Especialista em Educação",
       description: "Garante a eficácia pedagógica",
-      avatar: "/placeholder.svg?height=100&width=100",
+      avatar: "/bonnie.jpeg?height=100&width=100",
       icon: "🍎",
     },
     {
       name: "Guilherme Hu",
       role: "Tecnologia e Design",
       description: "Constrói e mantém a plataforma",
-      avatar: "/placeholder.svg?height=100&width=100",
+      avatar: "/bingo.jpeg?height=100&width=100",
       icon: "💻",
     },
   ]
@@ -304,16 +304,23 @@ export default function HomePage() {
             <Button size="lg" className="vintage-btn text-lg px-10 py-8 retro-text" asChild>
               <a href="/downloads/Welcome Activity.pdf" download>
                 <Download className="w-5 h-5 mr-3" />
-                Browse Materials 📖
+                Download Your First Material! 📖
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-pink-400 text-pink-700 hover:bg-pink-50 text-lg px-10 py-8 retro-text photo-border"
+              asChild
             >
-              <Heart className="w-5 h-5 mr-3" />
-              Learn Our Story 💕
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfycbC8kjQpKJxz9cXk_a-FxP0r46dVWI_gMvI2muFHItHKmg/viewform"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Heart className="w-5 h-5 mr-3" />
+                Acessar Formulário 💕
+              </a>
             </Button>
           </div>
 
@@ -491,16 +498,25 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-5xl vintage-heading mb-8 text-white">Pronto para Começar a Aprender? 🚀</h2>
           <p className="text-xl mb-12 text-white/90 retro-text">
-            Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais
-            gratuitos. 🌍
+            Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais e aulas gratuitas! Preencha o formulário abaixo para se inscrever como aluno! 🌍
+          </p>
+          <p className="text-xl mb-12 text-white/90 retro-text">
+          Você também pode se inscrever como voluntário no projeto, participando como professor ou criador de conteúdo! 🌟
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               size="lg"
               className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text photo-border"
+              asChild
             >
-              <Download className="w-5 h-5 mr-3" />
-              Baixe Sua Primeira Folha 📥
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfycbC8kjQpKJxz9cXk_a-FxP0r46dVWI_gMvI2muFHItHKmg/viewform"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Download className="w-5 h-5 mr-3" />
+                Responder ao Formulário 📥
+              </a>
             </Button>
           </div>
         </div>
