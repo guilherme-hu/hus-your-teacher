@@ -164,54 +164,61 @@ export default function HomePage() {
       filePath: "/downloads/Reading Comprehension.pdf"
     },
     {
+      title: "Past Simple Vs Present Perfect",
+      description: "Comparação entre os tempos verbais Past Simple e Present Perfect",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Past Simple Vs Present Perfect.pdf"
+    },
+    {
       title: "Verb Tenses Review",
       description: "Revise o quanto você aprendeu sobre tempos verbais até agora!",
       level: "Iniciante",
       icon: "🕰️",
       filePath: "/downloads/Verb Tenses Review.pdf"
     },
-    // {
-    //   title: "Creative Writing",
-    //   description: "Produção de texto com os tempos verbais que aprendemos até agora",
-    //   level: "Iniciante",
-    //   icon: "⏳",
-    //   filePath: "/downloads/Creative Writing.pdf"
-    // },
-    // {
-    //   title: "Food Idioms",
-    //   description: "Expressões idiomáticas sobre comida",
-    //   level: "Iniciante",
-    //   icon: "⏳",
-    //   filePath: "/downloads/Food Idioms.pdf"
-    // },
-    // {
-    //   title: "Personality Adjectives",
-    //   description: "Vocabulário sobre adjetivos de personalidade",
-    //   level: "Iniciante",
-    //   icon: "🍽️",
-    //   filePath: "/downloads/Personality Adjectives.pdf"
-    // },
-    // {
-    //   title: "Emotional Adjectives",
-    //   description: "Vocabulário sobre adjetivos que descrevem emoções",
-    //   level: "Iniciante",
-    //   icon: "🍕",
-    //   filePath: "/downloads/Emotional Adjectives.pdf"
-    // },
-    // {
-    //   title: "Reading Comprehension 2",
-    //   description: "Mais uma atividade de compreensão de leitura!",
-    //   level: "Iniciante",
-    //   icon: "🥗",
-    //   filePath: "/downloads/Reading Comprehension 2.pdf"
-    // },
-    // {
-    //   title: "Creative Writing 2",
-    //   description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
-    //   level: "Iniciante",
-    //   icon: "🥗",
-    //   filePath: "/downloads/Creative Writing 2.pdf"
-    // },
+    {
+      title: "Creative Writing",
+      description: "Produção de texto com os tempos verbais que aprendemos até agora",
+      level: "Iniciante",
+      icon: "⏳",
+      filePath: "/downloads/Creative Writing.pdf"
+    },
+    {
+      title: "Food Idioms",
+      description: "Expressões idiomáticas sobre comida",
+      level: "Iniciante",
+      icon: "⏳",
+      filePath: "/downloads/Food Idioms.pdf"
+    },
+    {
+      title: "Personality Adjectives",
+      description: "Vocabulário sobre adjetivos de personalidade",
+      level: "Iniciante",
+      icon: "🍽️",
+      filePath: "/downloads/Personality Adjectives.pdf"
+    },
+    {
+      title: "Emotional Adjectives",
+      description: "Vocabulário sobre adjetivos que descrevem emoções",
+      level: "Iniciante",
+      icon: "🍕",
+      filePath: "/downloads/Emotional Adjectives.pdf"
+    },
+    {
+      title: "Reading Comprehension 2",
+      description: "Mais uma atividade de compreensão de leitura!",
+      level: "Iniciante",
+      icon: "🥗",
+      filePath: "/downloads/Reading Comprehension 2.pdf"
+    },
+    {
+      title: "Creative Writing 2",
+      description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
+      level: "Iniciante",
+      icon: "🥗",
+      filePath: "/downloads/Creative Writing 2.pdf"
+    },
 
   ]
 
