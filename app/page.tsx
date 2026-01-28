@@ -157,18 +157,18 @@ export default function HomePage() {
       filePath: "/downloads/Present Perfect Practice.pdf"
     },
     {
-      title: "Reading Comprehension",
-      description: "Atividade de compreensão de leitura em inglês",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Reading Comprehension.pdf"
-    },
-    {
       title: "Past Simple Vs Present Perfect",
       description: "Comparação entre os tempos verbais Past Simple e Present Perfect",
       level: "Iniciante",
       icon: "🕰️",
       filePath: "/downloads/Past Simple Vs Present Perfect.pdf"
+    },
+    {
+      title: "Reading Comprehension",
+      description: "Atividade de compreensão de leitura em inglês",
+      level: "Iniciante",
+      icon: "🕰️",
+      filePath: "/downloads/Reading Comprehension.pdf"
     },
     {
       title: "Verb Tenses Review",
