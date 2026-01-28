@@ -167,7 +167,7 @@ export default function HomePage() {
       title: "Reading Comprehension",
       description: "Atividade de compreensão de leitura em inglês",
       level: "Iniciante",
-      icon: "🕰️",
+      icon: "📚",
       filePath: "/downloads/Reading Comprehension.pdf"
     },
     {
@@ -218,6 +218,13 @@ export default function HomePage() {
       level: "Iniciante",
       icon: "🥗",
       filePath: "/downloads/Creative Writing 2.pdf"
+    },
+    {
+      title: "Grammatical Class",
+      description: "Identifique a classe gramatical das palavras fornecidas!",
+      level: "Iniciante",
+      icon: "📚",
+      filePath: "/downloads/Grammatical Class.pdf"
     },
 
   ]
