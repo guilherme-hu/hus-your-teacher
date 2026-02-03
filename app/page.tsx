@@ -45,14 +45,14 @@ export default function HomePage() {
       filePath: "/downloads/Animals.pdf"
     },
     {
-      title: "Verb “To Be”",
-      description: "Regras gramaticais para o verbo “to be” ",
+      title: "Verb \"To Be\"",
+      description: "Regras gramaticais para o verbo \"to be\" ",
       level: "Iniciante",
       icon: "📝",
       filePath: "/downloads/Verb to be.pdf"
     },
     {
-      title: "Practice Verb “To Be”",
+      title: "Practice Verb \"To Be\"",
       description: "Pratique o que você aprendeu na última aula! ",
       level: "Iniciante",
       icon: "📖",
@@ -72,182 +72,28 @@ export default function HomePage() {
       icon: "✏️",
       filePath: "/downloads/Resolutions.pdf"
     },
-    {
-      title: "Simple Present",
-      description: "Regras gramaticais para o tempo verbal Simple Present",
-      level: "Iniciante",
-      icon: "💬",
-      filePath: "/downloads/Simple Present.pdf"
-    },
-    {
-      title: "Simple Present Practice",
-      description: "Pratique a forma afirmativa do Simple Present",
-      level: "Iniciante",
-      icon: "⏰",
-      filePath: "/downloads/Simple Present Practice.pdf"
-    },
-    {
-      title: "Verb “To Do” Practice ",
-      description: "Pratique a colocação do verb “to do” e suas contrações",
-      level: "Iniciante",
-      icon: "👪",
-      filePath: "/downloads/Verb To Do Practice.pdf"
-    },
-    {
-      title: "Do, Does & Did",
-      description: "Aprenda as diferenças entre “do”, “does” e “did”",
-      level: "Iniciante",
-      icon: "🏠",
-      filePath: "/downloads/Do Does Did.pdf"
-    },
-    {
-      title: "Antonyms",
-      description: "Antônimos em inglês",
-      level: "Iniciante",
-      icon: "❌",
-      filePath: "/downloads/Antonyms.pdf"
-    },
-    {
-      title: "Verb “To Like”",
-      description: "Regras gramaticais referentes ao verb “to like”",
-      level: "Iniciante",
-      icon: "❓",
-      filePath: "/downloads/Verb ''To Like''.pdf"
-    },
-    {
-      title: "Progress Check",
-      description: "Complete esta atividade para avaliar o quanto você aprendeu até agora! Não hesite em nos mandá-la para corrigirmos  😉",
-      level: "Iniciante",
-      icon: "💡",
-      filePath: "/downloads/Progress Check.pdf"
-    },
-    {
-      title: "Past Simple",
-      description: "Regras gramaticais para o tempo verbal Past Simple",
-      level: "Iniciante",
-      icon: "📅",
-      filePath: "/downloads/Past Simple.pdf"
-    },
-    {
-      title: "Past Simple Practice",
-      description: "Pratique o que você aprendeu na última aula",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Past Simple Practice.pdf"
-    },
-    {
-      title: "Past Simple Practice 2",
-      description: "Pratique a colocação de verbos no Past Simple",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Past Simple Practice 2.pdf"
-    },
-    {
-      title: "Present Perfect ",
-      description: "Regras gramaticais para o tempo verbal Present Perfect",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Present Perfect.pdf"
-    },
-    {
-      title: "Present Perfect Practice",
-      description: "Pratique o que você aprendeu na última aula",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Present Perfect Practice.pdf"
-    },
-    {
-      title: "Past Simple Vs Present Perfect",
-      description: "Comparação entre os tempos verbais Past Simple e Present Perfect",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Past Simple Vs Present Perfect.pdf"
-    },
-    {
-      title: "Reading Comprehension",
-      description: "Atividade de compreensão de leitura em inglês",
-      level: "Iniciante",
-      icon: "📚",
-      filePath: "/downloads/Reading Comprehension.pdf"
-    },
-    {
-      title: "Verb Tenses Review",
-      description: "Revise o quanto você aprendeu sobre tempos verbais até agora!",
-      level: "Iniciante",
-      icon: "🕰️",
-      filePath: "/downloads/Verb Tenses Review.pdf"
-    },
-    {
-      title: "Creative Writing",
-      description: "Produção de texto com os tempos verbais que aprendemos até agora",
-      level: "Iniciante",
-      icon: "⏳",
-      filePath: "/downloads/Creative Writing.pdf"
-    },
-    {
-      title: "Food Idioms",
-      description: "Expressões idiomáticas sobre comida",
-      level: "Iniciante",
-      icon: "⏳",
-      filePath: "/downloads/Food Idioms.pdf"
-    },
-    {
-      title: "Personality Adjectives",
-      description: "Vocabulário sobre adjetivos de personalidade",
-      level: "Iniciante",
-      icon: "🍽️",
-      filePath: "/downloads/Personality Adjectives.pdf"
-    },
-    {
-      title: "Emotional Adjectives",
-      description: "Vocabulário sobre adjetivos que descrevem emoções",
-      level: "Iniciante",
-      icon: "🍕",
-      filePath: "/downloads/Emotional Adjectives.pdf"
-    },
-    {
-      title: "Reading Comprehension 2",
-      description: "Mais uma atividade de compreensão de leitura!",
-      level: "Iniciante",
-      icon: "🥗",
-      filePath: "/downloads/Reading Comprehension 2.pdf"
-    },
-    {
-      title: "Creative Writing 2",
-      description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
-      level: "Iniciante",
-      icon: "🥗",
-      filePath: "/downloads/Creative Writing 2.pdf"
-    },
-    {
-      title: "Grammatical Class",
-      description: "Identifique a classe gramatical das palavras fornecidas!",
-      level: "Iniciante",
-      icon: "📚",
-      filePath: "/downloads/Grammatical Class.pdf"
-    },
 
   ]
 
   const teamMembers = [
     {
       name: "Jessie Hu",
-      role: "Criadora de Conteúdo",
-      description: "Desenvolve materiais de aprendizado envolventes",
+      role: "Chief Executive Officer",
+      description: "Organização e gerência geral do projeto",
       avatar: "/dudu.jpeg?height=100&width=100",
-      icon: "🎨",
+      icon: "🎓",
     },
     {
       name: "Emily Hu",
-      role: "Especialista em Educação",
-      description: "Garante a eficácia pedagógica",
+      role: "Chief Marketing Officer",
+      description: "Divulgação e design do projeto",
       avatar: "/bonnie.jpeg?height=100&width=100",
-      icon: "🍎",
+      icon: "🎨",
     },
     {
       name: "Guilherme Hu",
-      role: "Tecnologia e Design",
-      description: "Constrói e mantém a plataforma",
+      role: "Chief Technology Officer",
+      description: "Desenvolvimento e manutenção do site",
       avatar: "/bingo.jpeg?height=100&width=100",
       icon: "💻",
     },
@@ -376,7 +222,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {learningSheets.map((sheet, index) => (
+            {learningSheets.slice(0, 6).map((sheet, index) => (
               <Card
                 key={index}
                 className="vintage-card scrapbook-tape hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
@@ -415,10 +261,12 @@ export default function HomePage() {
           <div className="text-center mt-16">
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-pink-400 text-pink-700 hover:bg-pink-50 retro-text photo-border"
+              className="vintage-btn text-xl px-16 py-8 retro-text shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              asChild
             >
-              Fique ligado nos materiais futuros! 👀
+              <Link href="/materiais">
+                📚 Ver Todos os Materiais ✨
+              </Link>
             </Button>
           </div>
         </div>
