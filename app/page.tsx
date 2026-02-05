@@ -38,10 +38,18 @@ export default function HomePage() {
       filePath: "/downloads/Welcome Activity.pdf"
     },
     {
+      title: "Beginner Lesson",
+      description: "",
+      level: "Iniciante",
+      icon: "👋",
+      category: "Atividades",
+      filePath: "/downloads/Beginner Lesson.pdf"
+    },
+    {
       title: "Animals",
       description: "Aprenda como nomear alguns animais em inglês.",
       level: "Iniciante",
-      icon: "💬",
+      icon: "🐾",
       filePath: "/downloads/Animals.pdf"
     },
     {
@@ -64,13 +72,6 @@ export default function HomePage() {
       level: "Iniciante",
       icon: "🗣️",
       filePath: "/downloads/Classroom Vocabulary.pdf"
-    },
-    {
-      title: "Resolutions ",
-      description: "Destaque o que você aprendeu nas últimas 5 aulas e o que foi difícil!",
-      level: "Iniciante",
-      icon: "✏️",
-      filePath: "/downloads/Resolutions.pdf"
     },
 
   ]

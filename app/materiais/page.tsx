@@ -40,10 +40,18 @@ export default function MateriaisPage() {
       filePath: "/downloads/Welcome Activity.pdf"
     },
     {
+      title: "Beginner Lesson",
+      description: "Expressões básicas - cumprimentos e apresentações em inglês",
+      level: "Iniciante",
+      icon: "👋",
+      category: "Atividades",
+      filePath: "/downloads/Beginner Lesson.pdf"
+    },
+    {
       title: "Animals",
       description: "Aprenda como nomear alguns animais em inglês.",
       level: "Iniciante",
-      icon: "💬",
+      icon: "🐾",
       category: "Vocabulário",
       filePath: "/downloads/Animals.pdf"
     },
@@ -83,7 +91,7 @@ export default function MateriaisPage() {
       title: "Simple Present",
       description: "Regras gramaticais para o tempo verbal Simple Present",
       level: "Iniciante",
-      icon: "💬",
+      icon: "⏰",
       category: "Gramática",
       filePath: "/downloads/Simple Present.pdf"
     },
@@ -107,7 +115,7 @@ export default function MateriaisPage() {
       title: "Do, Does & Did",
       description: "Aprenda as diferenças entre \"do\", \"does\" e \"did\"",
       level: "Iniciante",
-      icon: "🏠",
+      icon: "❓",
       category: "Gramática",
       filePath: "/downloads/Do Does Did.pdf"
     },
@@ -195,7 +203,7 @@ export default function MateriaisPage() {
       title: "Verb Tenses Review",
       description: "Revise o quanto você aprendeu sobre tempos verbais até agora!",
       level: "Iniciante",
-      icon: "🕰️",
+      icon: "✍️",
       category: "Gramática",
       filePath: "/downloads/Verb Tenses Review.pdf"
     },
@@ -203,7 +211,7 @@ export default function MateriaisPage() {
       title: "Creative Writing",
       description: "Produção de texto com os tempos verbais que aprendemos até agora",
       level: "Iniciante",
-      icon: "⏳",
+      icon: "✍️",
       category: "Escrita",
       filePath: "/downloads/Creative Writing.pdf"
     },
@@ -211,7 +219,7 @@ export default function MateriaisPage() {
       title: "Food Idioms",
       description: "Expressões idiomáticas sobre comida",
       level: "Iniciante",
-      icon: "⏳",
+      icon: "🍔",
       category: "Vocabulário",
       filePath: "/downloads/Food Idioms.pdf"
     },
@@ -219,7 +227,7 @@ export default function MateriaisPage() {
       title: "Personality Adjectives",
       description: "Vocabulário sobre adjetivos de personalidade",
       level: "Iniciante",
-      icon: "🍽️",
+      icon: "😎",
       category: "Vocabulário",
       filePath: "/downloads/Personality Adjectives.pdf"
     },
@@ -227,7 +235,7 @@ export default function MateriaisPage() {
       title: "Emotional Adjectives",
       description: "Vocabulário sobre adjetivos que descrevem emoções",
       level: "Iniciante",
-      icon: "🍕",
+      icon: "😢",
       category: "Vocabulário",
       filePath: "/downloads/Emotional Adjectives.pdf"
     },
@@ -235,7 +243,7 @@ export default function MateriaisPage() {
       title: "Reading Comprehension 2",
       description: "Mais uma atividade de compreensão de leitura!",
       level: "Iniciante",
-      icon: "🥗",
+      icon: "📚",
       category: "Leitura",
       filePath: "/downloads/Reading Comprehension 2.pdf"
     },
@@ -243,7 +251,7 @@ export default function MateriaisPage() {
       title: "Creative Writing 2",
       description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
       level: "Iniciante",
-      icon: "🥗",
+      icon: "✍️",
       category: "Escrita",
       filePath: "/downloads/Creative Writing 2.pdf"
     },
@@ -251,7 +259,7 @@ export default function MateriaisPage() {
       title: "Grammatical Class",
       description: "Identifique a classe gramatical das palavras fornecidas!",
       level: "Iniciante",
-      icon: "📚",
+      icon: "🔤",
       category: "Gramática",
       filePath: "/downloads/Grammatical Class.pdf"
     },
@@ -259,7 +267,7 @@ export default function MateriaisPage() {
       title: "Seasons Vocabulary",
       description: "Vocabulário sobre o inverno e o verão",
       level: "Iniciante",
-      icon: "✏️",
+      icon: "🌞",
       category: "Vocabulário",
       filePath: "/downloads/Seasons Vocabulary.pdf"
     },
