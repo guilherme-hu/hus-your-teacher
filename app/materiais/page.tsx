@@ -255,6 +255,14 @@ export default function MateriaisPage() {
       category: "Gramática",
       filePath: "/downloads/Grammatical Class.pdf"
     },
+    {
+      title: "Winter Vocabulary",
+      description: "Vocabulário sobre o inverno",
+      level: "Iniciante",
+      icon: "✏️",
+      category: "Vocabulário",
+      filePath: "/downloads/Winter Vocabulary.pdf"
+    },
   ];
 
   const categories = ["Todos", "Gramática", "Vocabulário", "Leitura", "Escrita", "Atividades"];
@@ -311,7 +319,7 @@ export default function MateriaisPage() {
           <div className="text-center mb-12">
             <h1 className="text-6xl vintage-heading mb-6 text-gray-800">Todos os Materiais 📚</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto retro-text">
-              Aqui você encontra todos os {learningSheets.length} materiais de aprendizado disponíveis. Baixe, imprima e comece a aprender hoje! 🌟
+              Aqui você encontra todos os materiais de aprendizado disponíveis. Baixe, imprima e comece a aprender hoje! 🌟
             </p>
           </div>
 
