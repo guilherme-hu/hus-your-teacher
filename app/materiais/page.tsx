@@ -256,12 +256,12 @@ export default function MateriaisPage() {
       filePath: "/downloads/Grammatical Class.pdf"
     },
     {
-      title: "Winter Vocabulary",
-      description: "Vocabulário sobre o inverno",
+      title: "Seasons Vocabulary",
+      description: "Vocabulário sobre o inverno e o verão",
       level: "Iniciante",
       icon: "✏️",
       category: "Vocabulário",
-      filePath: "/downloads/Winter Vocabulary.pdf"
+      filePath: "/downloads/Seasons Vocabulary.pdf"
     },
   ];
 
