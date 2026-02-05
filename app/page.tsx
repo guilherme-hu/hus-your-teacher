@@ -39,7 +39,7 @@ export default function HomePage() {
     },
     {
       title: "Beginner Lesson",
-      description: "",
+      description: "Expressões básicas - cumprimentos e apresentações em inglês",
       level: "Iniciante",
       icon: "👋",
       category: "Atividades",
