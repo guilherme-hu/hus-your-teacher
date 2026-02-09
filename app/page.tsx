@@ -161,26 +161,27 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button size="lg" className="vintage-btn text-lg px-10 py-8 retro-text" asChild>
-              <a href="/downloads/Welcome Activity.pdf" download>
-                <Download className="w-5 h-5 mr-3" />
-                Download Your First Material! 📖
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch mb-16">
+            <Button size="lg" className="vintage-btn text-lg px-8 py-6 h-auto whitespace-normal retro-text w-full sm:w-[320px]" asChild>
+              <a href="/downloads/Welcome Activity.pdf" download className="flex flex-col gap-2 items-center justify-center text-center leading-tight">
+                <Download className="w-6 h-6 shrink-0" />
+                <span>Download Your First Material!</span>
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-pink-400 text-pink-700 hover:bg-pink-50 text-lg px-10 py-8 retro-text photo-border"
+              className="border-2 border-pink-400 text-pink-700 hover:bg-pink-50 text-lg px-8 py-6 h-auto whitespace-normal retro-text photo-border w-full sm:w-[320px]"
               asChild
             >
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfycbC8kjQpKJxz9cXk_a-FxP0r46dVWI_gMvI2muFHItHKmg/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeJM1BoAyCr5NuawsJ2AjjfUFKD5tkrsmQchaevWiBb1WRG8A/viewform"
                 target="_blank"
                 rel="noreferrer noopener"
+                className="flex flex-col gap-2 items-center justify-center text-center leading-tight"
               >
-                <Heart className="w-5 h-5 mr-3" />
-                Acessar Formulário 💕
+                <Heart className="w-6 h-6 shrink-0" />
+               <span>Join Us as a Student in Online Classes!</span>
               </a>
             </Button>
           </div>
@@ -288,6 +289,9 @@ export default function HomePage() {
                 Nossas folhas de trabalho são projetadas pensando nas crianças, mas são perfeitas para aprendizes de
                 todas as idades. Cada folha cobre tópicos importantes de inglês com atividades e explicações. 📝
               </p>
+              <p className="text-lg text-gray-700 mb-10 leading-relaxed retro-text">
+                Em adição à criação de materiais, também oferecemos aulas online gratuitas para complementar o aprendizado. Nossas aulas são projetadas para serem interativas e de fácil acesso, proporcionando aos alunos a oportunidade de praticar suas habilidades de inglês em um ambiente de apoio. 🌟
+              </p>
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3">
                   <Star className="w-6 h-6 text-yellow-500 fill-current" />
@@ -315,7 +319,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Team Section - IN PORTUGUESE */}
+      {/* Team Section */}
       <section id="team" className="py-24 px-4 bg-blue-50/60">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-20">
@@ -356,16 +360,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section - IN PORTUGUESE */}
+      {/* CTA Section */}
       <section className="py-24 px-4 bg-pink-400 vignette">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-5xl vintage-heading mb-8 text-white">Pronto para Começar a Aprender? 🚀</h2>
-          <p className="text-xl mb-12 text-white/90 retro-text">
-            Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais e aulas gratuitas! Preencha o formulário abaixo para se inscrever como aluno! 🌍
+            <p className="text-xl mb-12 text-white/90 retro-text">
+              Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais! Para complementar seus estudos, participe de nossas aulas online! Elas são completamente remotas, ao vivo e gratuitas. 🌍
           </p>
-          <p className="text-xl mb-12 text-white/90 retro-text">
+            <p className="text-xl mb-12 text-white/90 retro-text">
+              Horários de aula:
+              <br />
+              - Turma Básico II: Terça-feira, 18:00-19:00
+              <br />
+              - Turma Básico I: Quarta-feira, 16:00-17:00
+              <br />
+              - Turma Básico II: Quinta-feira, 17:00-18:00 
+            </p>
+          {/* <p className="text-xl mb-12 text-white/90 retro-text">
           Você também pode se inscrever como voluntário no projeto, participando como professor ou criador de conteúdo! 🌟
-          </p>
+          </p> */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               size="lg"
@@ -373,19 +386,19 @@ export default function HomePage() {
               asChild
             >
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfycbC8kjQpKJxz9cXk_a-FxP0r46dVWI_gMvI2muFHItHKmg/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeJM1BoAyCr5NuawsJ2AjjfUFKD5tkrsmQchaevWiBb1WRG8A/viewform"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 <Download className="w-5 h-5 mr-3" />
-                Responder ao Formulário 📥
+                Responder ao Formulário de Inscrição 📥
               </a>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Footer - IN PORTUGUESE */}
+      {/* Footer */}
       <footer className="py-16 px-4 bg-gray-800 text-yellow-100">
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
