@@ -200,6 +200,14 @@ export default function MateriaisPage() {
       filePath: "/downloads/Reading Comprehension.pdf"
     },
     {
+      title: "Interpretation of a Text",
+      description: "Interprete o texto fornecido e responda às perguntas relacionadas a ele!",
+      level: "Iniciante",
+      icon: "📚",
+      category: "Atividades",
+      filePath: "/downloads/Interpretation.pdf"
+    },
+    {
       title: "Verb Tenses Review",
       description: "Revise o quanto você aprendeu sobre tempos verbais até agora!",
       level: "Iniciante",
@@ -271,6 +279,14 @@ export default function MateriaisPage() {
       category: "Vocabulário",
       filePath: "/downloads/Seasons Vocabulary.pdf"
     },
+    {
+      title: "Present Perfect Continuous",
+      description: "Regras gramaticais para o tempo verbal Present Perfect Continuous",
+      level: "Iniciante",
+      icon: "⏰",
+      category: "Gramática",
+      filePath: "/downloads/Present Perfect Continuous.pdf"
+    }
   ];
 
   const categories = ["Todos", "Gramática", "Vocabulário", "Leitura", "Escrita", "Atividades"];

@@ -274,6 +274,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-24 px-4 bg-blue-50/60">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-5xl vintage-heading mb-8 text-gray-800">Pronto para Começar a Aprender? 🚀</h2>
+            <p className="text-xl mb-12 text-gray-600 retro-text">
+              Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais! Para complementar seus estudos, participe de nossas aulas online! Elas são completamente remotas, ao vivo e gratuitas. 🌍
+          </p>
+            <p className="text-xl mb-12 text-gray-600 retro-text">
+              Horários de aula:
+              <br />
+              - Turma Básico II: Terça-feira, 18:00-19:00
+              <br />
+              - Turma Básico I: Quarta-feira, 16:00-17:00
+              <br />
+              - Turma Básico II: Quinta-feira, 17:00-18:00 
+            </p>
+          {/* <p className="text-xl mb-12 text-white/90 retro-text">
+          Você também pode se inscrever como voluntário no projeto, participando como professor ou criador de conteúdo! 🌟
+          </p> */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              size="lg"
+              className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text photo-border"
+              asChild
+            >
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeJM1BoAyCr5NuawsJ2AjjfUFKD5tkrsmQchaevWiBb1WRG8A/viewform"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Download className="w-5 h-5 mr-3" />
+                Responder ao Formulário de Inscrição 📥
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Section - IN PORTUGUESE */}
       <section id="about" className="py-24 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -320,11 +358,11 @@ export default function HomePage() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-24 px-4 bg-blue-50/60">
+      <section id="team" className="py-24 px-4 bg-pink-400 vignette">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-20">
-            <h2 className="text-5xl vintage-heading mb-6 text-gray-800">Conheça a Família Hu 👨‍👩‍👧‍👦</h2>
-            <p className="text-xl text-gray-600 retro-text">
+            <h2 className="text-5xl vintage-heading mb-6 text-white">Conheça a Família Hu 👨‍👩‍👧‍👦</h2>
+            <p className="text-xl text-white/90 retro-text">
               Três primos unidos por uma paixão pela educação e por ajudar outros. 💕
             </p>
           </div>
@@ -356,44 +394,6 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 px-4 bg-pink-400 vignette">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl vintage-heading mb-8 text-white">Pronto para Começar a Aprender? 🚀</h2>
-            <p className="text-xl mb-12 text-white/90 retro-text">
-              Junte-se a aprendizes que estão melhorando seu inglês com nossos materiais! Para complementar seus estudos, participe de nossas aulas online! Elas são completamente remotas, ao vivo e gratuitas. 🌍
-          </p>
-            <p className="text-xl mb-12 text-white/90 retro-text">
-              Horários de aula:
-              <br />
-              - Turma Básico II: Terça-feira, 18:00-19:00
-              <br />
-              - Turma Básico I: Quarta-feira, 16:00-17:00
-              <br />
-              - Turma Básico II: Quinta-feira, 17:00-18:00 
-            </p>
-          {/* <p className="text-xl mb-12 text-white/90 retro-text">
-          Você também pode se inscrever como voluntário no projeto, participando como professor ou criador de conteúdo! 🌟
-          </p> */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text photo-border"
-              asChild
-            >
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeJM1BoAyCr5NuawsJ2AjjfUFKD5tkrsmQchaevWiBb1WRG8A/viewform"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <Download className="w-5 h-5 mr-3" />
-                Responder ao Formulário de Inscrição 📥
-              </a>
-            </Button>
           </div>
         </div>
       </section>
