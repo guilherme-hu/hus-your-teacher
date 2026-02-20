@@ -56,6 +56,14 @@ export default function MateriaisPage() {
       filePath: "/downloads/Animals.pdf"
     },
     {
+      title: "Animals Vocabulary",
+      description: "Vocabulário sobre animais",
+      level: "Iniciante",
+      icon: "🐾",
+      category: "Vocabulário",
+      filePath: "/downloads/Animals_vocabulary.pdf"
+    },
+    {
       title: "Verb \"To Be\"",
       description: "Regras gramaticais para o verbo \"to be\" ",
       level: "Iniciante",
@@ -295,14 +303,7 @@ export default function MateriaisPage() {
       category: "Leitura",
       filePath: "/downloads/Reading Comprehension 3.pdf"
     },
-    {
-      title: "Animals Vocabulary",
-      description: "Vocabulário sobre animais",
-      level: "Iniciante",
-      icon: "🐾",
-      category: "Vocabulário",
-      filePath: "/downloads/Animals_vocabulary.pdf"
-    },
+
   ];
 
   const categories = ["Todos", "Gramática", "Vocabulário", "Leitura", "Escrita", "Atividades"];

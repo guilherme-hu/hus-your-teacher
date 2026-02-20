@@ -53,6 +53,14 @@ export default function HomePage() {
       filePath: "/downloads/Animals.pdf"
     },
     {
+      title: "Animals Vocabulary",
+      description: "Vocabulário sobre animais",
+      level: "Iniciante",
+      icon: "🐾",
+      category: "Vocabulário",
+      filePath: "/downloads/Animals_vocabulary.pdf"
+    },
+    {
       title: "Verb \"To Be\"",
       description: "Regras gramaticais para o verbo \"to be\" ",
       level: "Iniciante",
@@ -65,13 +73,6 @@ export default function HomePage() {
       level: "Iniciante",
       icon: "📖",
       filePath: "/downloads/Practice Verb to be.pdf"
-    },
-    {
-      title: "Classroom Vocabulary",
-      description: "Vocabulário sobre sala de aula",
-      level: "Iniciante",
-      icon: "🗣️",
-      filePath: "/downloads/Classroom Vocabulary.pdf"
     },
 
   ]
