@@ -287,6 +287,14 @@ export default function MateriaisPage() {
       category: "Gramática",
       filePath: "/downloads/Present Perfect Continuous.pdf"
     }
+    {
+      title: "Reading Comprehension 3",
+      description: "Outra atividade de compreensão de leitura!",
+      level: "Iniciante",
+      icon: "📚",
+      category: "Leitura",
+      filePath: "/downloads/Reading Comprehension 3.pdf"
+    },
   ];
 
   const categories = ["Todos", "Gramática", "Vocabulário", "Leitura", "Escrita", "Atividades"];

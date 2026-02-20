@@ -289,6 +289,8 @@ export default function HomePage() {
               - Turma Básico I: Quarta-feira, 16:00-17:00
               <br />
               - Turma Básico II: Quinta-feira, 17:00-18:00 
+              <br />
+              - Turma Básico I: Sábado, 15:00-16:00 
             </p>
           {/* <p className="text-xl mb-12 text-white/90 retro-text">
           Você também pode se inscrever como voluntário no projeto, participando como professor ou criador de conteúdo! 🌟
