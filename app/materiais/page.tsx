@@ -286,7 +286,7 @@ export default function MateriaisPage() {
       icon: "⏰",
       category: "Gramática",
       filePath: "/downloads/Present Perfect Continuous.pdf"
-    }
+    },
     {
       title: "Reading Comprehension 3",
       description: "Outra atividade de compreensão de leitura!",
