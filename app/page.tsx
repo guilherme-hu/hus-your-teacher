@@ -54,7 +54,7 @@ export default function HomePage() {
     },
     {
       title: "Animals Vocabulary",
-      description: "Vocabulário sobre animais",
+      description: "Vocabulário e atividades sobre animais!",
       level: "Iniciante",
       icon: "🐾",
       category: "Vocabulário",
@@ -68,11 +68,11 @@ export default function HomePage() {
       filePath: "/downloads/Verb to be.pdf"
     },
     {
-      title: "Practice Verb \"To Be\"",
-      description: "Pratique o que você aprendeu na última aula! ",
+      title: "Professions Exercise",
+      description: "Atividades sobre profissões em inglês",
       level: "Iniciante",
-      icon: "📖",
-      filePath: "/downloads/Practice Verb to be.pdf"
+      icon: "👩‍⚕️",
+      filePath: "/downloads/Professions Exercise.pdf"
     },
 
   ]

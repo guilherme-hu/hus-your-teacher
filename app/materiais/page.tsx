@@ -57,11 +57,19 @@ export default function MateriaisPage() {
     },
     {
       title: "Animals Vocabulary",
-      description: "Vocabulário sobre animais",
+      description: "Vocabulário e atividades sobre animais!",
       level: "Iniciante",
       icon: "🐾",
       category: "Vocabulário",
       filePath: "/downloads/Animals_vocabulary.pdf"
+    },
+    {
+      title: "Professions Exercise",
+      description: "Atividades sobre profissões em inglês",
+      level: "Iniciante",
+      icon: "👩‍⚕️",
+      category: "Atividades",
+      filePath: "/downloads/Professions Exercise.pdf"
     },
     {
       title: "Verb \"To Be\"",
