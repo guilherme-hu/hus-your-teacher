@@ -80,11 +80,19 @@ export default function MateriaisPage() {
       filePath: "/downloads/Verb to be.pdf"
     },
     {
+      title: "O que é o verbo \"to be\"?",
+      description: "Explicação detalhada sobre o verbo \"to be\" e seus usos em inglês",
+      level: "Iniciante",
+      icon: "📝",
+      category: "Gramática",
+      filePath: "/downloads/O que é o verbo to be.pdf"
+    },
+    {
       title: "Practice Verb \"To Be\"",
       description: "Pratique o que você aprendeu na última aula! ",
       level: "Iniciante",
       icon: "📖",
-      category: "Gramática",
+      category: "Atividades",
       filePath: "/downloads/Practice Verb to be.pdf"
     },
     {

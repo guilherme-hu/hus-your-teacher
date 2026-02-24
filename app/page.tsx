@@ -61,19 +61,20 @@ export default function HomePage() {
       filePath: "/downloads/Animals_vocabulary.pdf"
     },
     {
-      title: "Verb \"To Be\"",
-      description: "Regras gramaticais para o verbo \"to be\" ",
-      level: "Iniciante",
-      icon: "📝",
-      filePath: "/downloads/Verb to be.pdf"
-    },
-    {
       title: "Professions Exercise",
       description: "Atividades sobre profissões em inglês",
       level: "Iniciante",
       icon: "👩‍⚕️",
       filePath: "/downloads/Professions Exercise.pdf"
     },
+    {
+      title: "Verb \"To Be\"",
+      description: "Regras gramaticais para o verbo \"to be\" ",
+      level: "Iniciante",
+      icon: "📝",
+      filePath: "/downloads/Verb to be.pdf"
+    },
+
 
   ]
 
