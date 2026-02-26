@@ -104,7 +104,7 @@ export default function MateriaisPage() {
       filePath: "/downloads/Classroom Vocabulary.pdf"
     },
     {
-      title: "Resolutions ",
+      title: "Resolutions",
       description: "Destaque o que você aprendeu nas últimas 5 aulas e o que foi difícil!",
       level: "Iniciante",
       icon: "✏️",
@@ -318,6 +318,14 @@ export default function MateriaisPage() {
       icon: "📚",
       category: "Leitura",
       filePath: "/downloads/Reading Comprehension 3.pdf"
+    },
+    {
+      title: "Practice Daily Vocabulary",
+      description: "Palavras essenciais e úteis para uso cotidiano!",
+      level: "Iniciante",
+      icon: "🗣️",
+      category: "Vocabulário",
+      filePath: "/downloads/Practice Daily Vocabulary.pdf"
     },
 
   ];
