@@ -129,7 +129,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section - STAYS IN ENGLISH */}
+      {/* Hero Section */}
       <section className="py-24 px-4 relative hero-section vignette">
         <VintageStickers />
         <div className="container mx-auto text-center max-w-4xl relative z-10">
@@ -373,7 +373,7 @@ export default function HomePage() {
             {teamMembers.map((member, index) => (
               <Card
                 key={index}
-                className="text-center vintage-card border-2 border-pink-300 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 scrapbook-tape"
+                className="text-center vintage-card bg-pink-100 border-2 border-pink-300 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 scrapbook-tape"
               >
                 <CardHeader>
                   <div className="w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden bg-pink-200 flex items-center justify-center photo-border">
@@ -396,6 +396,18 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <Button
+              size="lg"
+              className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-xl px-16 py-8 retro-text shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-pink-100"
+              asChild
+            >
+              <Link href="/membros">
+                👥 Meet All Members ✨
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
