@@ -105,13 +105,7 @@ const areas = [
         avatar: "/members/brenda.jpeg",
         icon: "🌟",
         },
-        {
-        name: "Camila T.",
-        role: "Communication & Marketing Member",
-        description: "",
-        avatar: "/members/camila.jpeg",
-        icon: "🌟",
-        },
+
     ],
   },
   {
@@ -124,6 +118,13 @@ const areas = [
         role: "Ambassador",
         description: "",
         avatar: "/members/thayllane.jpeg",
+        icon: "🌟",
+        },
+        {
+        name: "Camila T.",
+        role: "Ambassador",
+        description: "",
+        avatar: "/members/camila.jpeg",
         icon: "🌟",
         },
     ],
