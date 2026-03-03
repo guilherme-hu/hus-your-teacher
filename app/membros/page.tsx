@@ -78,17 +78,17 @@ const areas = [
         icon: "🌟",
         },
         {
-        name: "Nathalya V.",
-        role: "Curriculum Development Member",
-        description: "",
-        avatar: "/members/nathalya.jpeg",
-        icon: "🌟",
-        },
-        {
         name: "Bruna B.",
         role: "Curriculum Development Member",
         description: "",
         avatar: "/members/bruna.jpeg",
+        icon: "🌟",
+        },
+      {
+        name: "Nathalya V.",
+        role: "Curriculum Development Member",
+        description: "",
+        avatar: "/members/nathalya.jpeg",
         icon: "🌟",
         },
     ],
@@ -114,19 +114,20 @@ const areas = [
     description: "Representam e divulgam o projeto em suas comunidades, conectando novos alunos e parceiros ao Hu's Your Teacher.",
     members: [
         {
-        name: "Thayllane B.",
-        role: "Ambassador",
-        description: "",
-        avatar: "/members/thayllane.jpeg",
-        icon: "🌟",
-        },
-        {
         name: "Camila T.",
         role: "Ambassador",
         description: "",
         avatar: "/members/camila.jpeg",
         icon: "🌟",
         },
+        {
+        name: "Thayllane B.",
+        role: "Ambassador",
+        description: "",
+        avatar: "/members/thayllane.jpeg",
+        icon: "🌟",
+        },
+
     ],
   },
 
