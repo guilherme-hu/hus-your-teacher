@@ -104,8 +104,24 @@ export default function MateriaisPage() {
       filePath: "/downloads/Classroom Vocabulary.pdf"
     },
     {
+      title: "Classroom Vocabulary Lesson",
+      description: "Resumo sobre vocabulário sobre sala de aula e atividades propostas!",
+      level: "Iniciante",
+      icon: "🗣️",
+      category: "Vocabulário",
+      filePath: "/downloads/Classroom Vocabulary Lesson.pdf"
+    },
+    {
+      title: "Classroom Vocabulary Activity",
+      description: "Outra atividade sobre vocabulário de sala de aula!",
+      level: "Iniciante",
+      icon: "🗣️",
+      category: "Atividades",
+      filePath: "/downloads/Classroom Vocabulary Activity.pdf"
+    },
+    {
       title: "Resolutions",
-      description: "Destaque o que você aprendeu nas últimas 5 aulas e o que foi difícil!",
+      description: "Destaque o que você aprendeu nas últimas aulas e o que foi difícil!",
       level: "Iniciante",
       icon: "✏️",
       category: "Atividades",
