@@ -42,8 +42,21 @@ const areas = [
       //   avatar: "/foto.jpeg",
       //   icon: "🌟",
       // },
-
-    {
+      {
+        name: "Carmen B.",
+        role: "Teaching Management Officer",
+        description: "",
+        avatar: "/placeholder_profile.jpg",
+        icon: "🌟",
+      },
+      {
+        name: "Clara R.",
+        role: "Curriculum Development Coordinator & Teacher",
+        description: "",
+        avatar: "/members/clara.jpeg",
+        icon: "🌟",
+      },
+      {
         name: "Nicole R.",
         role: "Teacher",
         description: "",
@@ -57,7 +70,13 @@ const areas = [
     icon: "📝",
     description: "Planejam e desenvolvem os materiais didáticos e atividades utilizados nas aulas e disponibilizados gratuitamente no site.",
     members: [
-
+        {
+        name: "Clara R.",
+        role: "Curriculum Development Coordinator & Teacher",
+        description: "",
+        avatar: "/members/clara.jpeg",
+        icon: "🌟",
+        },
         {
         name: "Nathalya V.",
         role: "Curriculum Development Member",
