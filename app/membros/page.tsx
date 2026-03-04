@@ -57,6 +57,13 @@ const areas = [
         icon: "🌟",
       },
       {
+        name: "Lina M.",
+        role: "Teacher",
+        description: "",
+        avatar: "/placeholder_profile.jpg",
+        icon: "🌟",
+      },
+      {
         name: "Nicole R.",
         role: "Teacher",
         description: "",
