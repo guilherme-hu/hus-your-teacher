@@ -128,6 +128,14 @@ export default function MateriaisPage() {
       filePath: "/downloads/Resolutions.pdf"
     },
     {
+      title: "Simple Present - introduction",
+      description: "Uma introdução ao tempo verbal Simple Present e suas regras gramaticais",
+      level: "Iniciante",
+      icon: "⏰",
+      category: "Gramática",
+      filePath: "/downloads/Simple Present - intro.pdf"
+    },
+    {
       title: "Simple Present",
       description: "Regras gramaticais para o tempo verbal Simple Present",
       level: "Iniciante",
@@ -136,11 +144,19 @@ export default function MateriaisPage() {
       filePath: "/downloads/Simple Present.pdf"
     },
     {
-      title: "Simple Present Practice",
-      description: "Pratique a forma afirmativa do Simple Present",
+      title: "Simple Present Lesson",
+      description: "Resumo sobre o tempo verbal Simple Present e atividades propostas!",
       level: "Iniciante",
       icon: "⏰",
       category: "Gramática",
+      filePath: "/downloads/Simple Present Lesson.pdf"
+    },
+    {
+      title: "Simple Present Practice",
+      description: "Outra atividade para praticar o Simple Present",
+      level: "Iniciante",
+      icon: "⏰",
+      category: "Atividades",
       filePath: "/downloads/Simple Present Practice.pdf"
     },
     {
