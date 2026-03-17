@@ -352,6 +352,14 @@ export default function MateriaisPage() {
       filePath: "/downloads/Reading Comprehension 3.pdf"
     },
     {
+      title: "Reading Comprehension 4",
+      description: "Mais uma atividade de compreensão de leitura!",
+      level: "Iniciante",
+      icon: "📚",
+      category: "Leitura",
+      filePath: "/downloads/Reading Comprehension 4.pdf"
+    },
+    {
       title: "Practice Daily Vocabulary",
       description: "Palavras essenciais e úteis para uso cotidiano!",
       level: "Iniciante",
