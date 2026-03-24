@@ -160,14 +160,6 @@ export default function MateriaisPage() {
       filePath: "/downloads/Simple Present Practice.pdf"
     },
     {
-      title: "Verb \"To Do\" Practice ",
-      description: "Pratique a colocação do verb \"to do\" e suas contrações",
-      level: "Iniciante",
-      icon: "👪",
-      category: "Gramática",
-      filePath: "/downloads/Verb To Do Practice.pdf"
-    },
-    {
       title: "Do, Does & Did",
       description: "Aprenda as diferenças entre \"do\", \"does\" e \"did\"",
       level: "Iniciante",
@@ -175,6 +167,23 @@ export default function MateriaisPage() {
       category: "Gramática",
       filePath: "/downloads/Do Does Did.pdf"
     },
+    {
+      title: "Verb \"To Do\"",
+      description: "Regras gramaticais para o verb \"to do\" e suas contrações",
+      level: "Iniciante",
+      icon: "❓",
+      category: "Gramática",
+      filePath: "/downloads/Verb To Do.pdf"
+    },
+    {
+      title: "Verb \"To Do\" Practice ",
+      description: "Pratique a colocação do verb \"to do\" e suas contrações",
+      level: "Iniciante",
+      icon: "❓",
+      category: "Gramática",
+      filePath: "/downloads/Verb To Do Practice.pdf"
+    },
+
     {
       title: "Antonyms",
       description: "Antônimos em inglês",
