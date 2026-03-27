@@ -288,7 +288,7 @@ export default function HomePage() {
               <br />
               - Turma Básico II: Terça-feira, 18:00-19:00
               <br />
-              - Turma Básico I: Quarta-feira, 16:00-17:00
+              - Turma Básico I: Quarta-feira, 17:00-18:00
               <br />
               - Turma Básico I: Sábado, 15:00-16:00 
             </p>
