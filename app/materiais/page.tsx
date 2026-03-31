@@ -185,12 +185,20 @@ export default function MateriaisPage() {
     },
 
     {
-      title: "Antonyms",
-      description: "Antônimos em inglês",
+      title: "Antonyms Lesson",
+      description: "Aprenda sobre antônimos em inglês",
       level: "Iniciante",
       icon: "❌",
       category: "Vocabulário",
-      filePath: "/downloads/Antonyms.pdf"
+      filePath: "/downloads/Antonyms Lesson.pdf"
+    },
+    {
+      title: "Antonyms Practice",
+      description: "Atividade sobre antônimos em inglês",
+      level: "Iniciante",
+      icon: "❌",
+      category: "Atividades",
+      filePath: "/downloads/Antonyms Practice.pdf"
     },
     {
       title: "Verb \"To Like\"",
