@@ -305,6 +305,14 @@ export default function MateriaisPage() {
       filePath: "/downloads/Food Idioms.pdf"
     },
     {
+      title: "Food Vocabulary",
+      description: "Vocabulário sobre comida",
+      level: "Iniciante",
+      icon: "🍔",
+      category: "Vocabulário",
+      filePath: "/downloads/Food Vocabulary.pdf"
+    },
+    {
       title: "Personality Adjectives",
       description: "Vocabulário sobre adjetivos de personalidade",
       level: "Iniciante",
