@@ -241,7 +241,7 @@ export default function MateriaisPage() {
       filePath: "/downloads/Past Simple Practice 2.pdf"
     },
     {
-      title: "Present Perfect ",
+      title: "Present Perfect",
       description: "Regras gramaticais para o tempo verbal Present Perfect",
       level: "Iniciante",
       icon: "🕰️",
@@ -253,8 +253,16 @@ export default function MateriaisPage() {
       description: "Pratique o que você aprendeu na última aula",
       level: "Iniciante",
       icon: "🕰️",
-      category: "Gramática",
+      category: "Atividades",
       filePath: "/downloads/Present Perfect Practice.pdf"
+    },
+    {
+      title: "Present Perfect X Present Perfect Continuous",
+      description: "Comparação entre os tempos verbais Present Perfect e Present Perfect Continuous",
+      level: "Iniciante",
+      icon: "🕰️",
+      category: "Gramática",
+      filePath: "/downloads/present perfect x present perfect continuous.pdf"
     },
     {
       title: "Past Simple Vs Present Perfect",
