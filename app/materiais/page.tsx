@@ -201,12 +201,20 @@ export default function MateriaisPage() {
       filePath: "/downloads/Antonyms Practice.pdf"
     },
     {
-      title: "Verb \"To Like\"",
-      description: "Regras gramaticais referentes ao verb \"to like\"",
+      title: "Verb \"To Like\" - introduction",
+      description: "Uma introdução ao verbo \"to like\" e suas regras gramaticais",
       level: "Iniciante",
       icon: "❓",
       category: "Gramática",
       filePath: "/downloads/Verb ''To Like''.pdf"
+    },
+    {
+      title: "Verb \"To Like\"",
+      description: "Regras gramaticais para o verbo \"to like\"",
+      level: "Iniciante",
+      icon: "❓",
+      category: "Gramática",
+      filePath: "/downloads/Verbo To Like.pdf"
     },
     {
       title: "Progress Check",

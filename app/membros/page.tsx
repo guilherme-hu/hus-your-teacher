@@ -91,13 +91,13 @@ const areas = [
         avatar: "/members/bruna.jpeg",
         icon: "🌟",
         },
-      // {
-        // name: "Nathalya V.",
-        // role: "Curriculum Development Member",
-        // description: "",
-        // avatar: "/members/nathalya.jpeg",
-        // icon: "🌟",
-        // },
+        {
+        name: "Maria Clara A.",
+        role: "Curriculum Development Member",
+        description: "",
+        avatar: "/members/maria.jpeg",
+        icon: "🌟",
+        },
     ],
   },
   {
