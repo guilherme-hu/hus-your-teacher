@@ -210,7 +210,7 @@ export default function MateriaisPage() {
     },
     {
       title: "Verb \"To Like\"",
-      description: "Regras gramaticais para o verbo \"to like\"",
+      description: "Regras gramaticais para o verbo \"to like\" e suas contrações",
       level: "Iniciante",
       icon: "❓",
       category: "Gramática",
