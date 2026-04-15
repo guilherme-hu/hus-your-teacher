@@ -95,7 +95,7 @@ const areas = [
         name: "Maria Clara A.",
         role: "Curriculum Development Member",
         description: "",
-        avatar: "/members/maria.png",
+        avatar: "/members/maria.jpeg",
         icon: "🌟",
         },
     ],
