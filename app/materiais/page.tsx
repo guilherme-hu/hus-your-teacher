@@ -249,12 +249,28 @@ export default function MateriaisPage() {
       filePath: "/downloads/Past Simple Practice 2.pdf"
     },
     {
+      title: "Present Perfect - introduction",
+      description: "Uma introdução ao tempo verbal Present Perfect e suas regras gramaticais",
+      level: "Iniciante",
+      icon: "🕰️",
+      category: "Gramática",
+      filePath: "/downloads/Present Perfect - intro.pdf"
+    },
+        {
       title: "Present Perfect",
       description: "Regras gramaticais para o tempo verbal Present Perfect",
       level: "Iniciante",
       icon: "🕰️",
       category: "Gramática",
       filePath: "/downloads/Present Perfect.pdf"
+    },
+        {
+      title: "Present Perfect Lesson",
+      description: "Resumo sobre o tempo verbal Present Perfect e atividades propostas!",
+      level: "Iniciante",
+      icon: "🕰️",
+      category: "Gramática",
+      filePath: "/downloads/Present Perfect Lesson.pdf"
     },
     {
       title: "Present Perfect Practice",
