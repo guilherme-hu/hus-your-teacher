@@ -424,6 +424,14 @@ export default function MateriaisPage() {
       category: "Vocabulário",
       filePath: "/downloads/Practice Daily Vocabulary.pdf"
     },
+    {
+      title: "Girias e Abreviações",
+      description: "Expressões idiomáticas e abreviações comuns!",
+      level: "Iniciante",
+      icon: "🗣️",
+      category: "Vocabulário",
+      filePath: "/downloads/Girias e Abreviacoes.pdf"
+    },
 
   ];
 
