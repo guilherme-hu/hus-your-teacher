@@ -425,12 +425,20 @@ export default function MateriaisPage() {
       filePath: "/downloads/Practice Daily Vocabulary.pdf"
     },
     {
-      title: "Girias e Abreviações",
+      title: "Slang and Abbreviations",
       description: "Expressões idiomáticas e abreviações comuns!",
       level: "Iniciante",
       icon: "🗣️",
       category: "Vocabulário",
-      filePath: "/downloads/Girias e Abreviacoes.pdf"
+      filePath: "/downloads/Slang_Abbreviations.pdf"
+    },
+    {
+      title: "Vacation Vocabulary",
+      description: "Vocabulário sobre viagens e férias",
+      level: "Iniciante",
+      icon: "🗣️",
+      category: "Vocabulário",
+      filePath: "/downloads/Vacation Vocabulary.pdf"
     },
 
   ];
