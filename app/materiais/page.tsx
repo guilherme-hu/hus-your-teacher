@@ -440,6 +440,14 @@ export default function MateriaisPage() {
       category: "Vocabulário",
       filePath: "/downloads/Vacation Vocabulary.pdf"
     },
+    {
+      title: "Action Verbs",
+      description: "Vocabulário sobre verbos de ação",
+      level: "Iniciante",
+      icon: "🏃",
+      category: "Vocabulário",
+      filePath: "/downloads/Action Verbs.pdf"
+    }
 
   ];
 
