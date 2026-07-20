@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Download, Heart, Users, BookOpen, Star, Globe } from "lucide-react"
+import { Download, Heart, Users, BookOpen, Star, Globe, Instagram, TrendingUp, Sparkles, Clock, Handshake, FileText, MousePointerClick } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
@@ -101,6 +101,81 @@ export default function HomePage() {
       icon: "💻",
     },
   ]
+
+  const achievementsList = [
+    {
+      icon: Instagram,
+      iconColor: "text-pink-600",
+      bgClass: "bg-pink-100",
+      borderClass: "border-pink-400",
+      value: "900+",
+      title: "Seguidores",
+      description: "Acompanhando o projeto no Instagram"
+    },
+    {
+      icon: Globe,
+      iconColor: "text-blue-600",
+      bgClass: "bg-blue-100",
+      borderClass: "border-blue-400",
+      value: "8000+",
+      title: "Perfis Alcançados",
+      description: "Alcance de nossos conteúdos no Instagram"
+    },
+    {
+      icon: Clock,
+      iconColor: "text-orange-600",
+      bgClass: "bg-orange-100",
+      borderClass: "border-orange-400",
+      value: "30+",
+      title: "Horas de Aula",
+      description: "Dadas no primeiro semestre de 2026"
+    },
+    {
+      icon: Users,
+      iconColor: "text-green-600",
+      bgClass: "bg-green-200",
+      borderClass: "border-green-400",
+      value: "15+",
+      title: "Voluntários",
+      description: "Recrutados para auxiliar no projeto"
+    },
+    {
+      icon: Handshake,
+      iconColor: "text-purple-600",
+      bgClass: "bg-purple-100",
+      borderClass: "border-purple-400",
+      value: "2",
+      title: "Colaborações",
+      description: "Parcerias incríveis realizadas"
+    },
+    {
+      icon: Sparkles,
+      iconColor: "text-yellow-600",
+      bgClass: "bg-yellow-200",
+      borderClass: "border-yellow-400",
+      value: "200+",
+      title: "Pessoas Impactadas",
+      description: "Vidas transformadas pela educação"
+    },
+    {
+      icon: FileText,
+      iconColor: "text-teal-800",
+      bgClass: "bg-teal-100",
+      borderClass: "border-teal-300",
+      value: "100+",
+      title: "Páginas de Conteúdo",
+      description: "Materiais disponibilizados gratuitamente"
+    },
+    {
+      icon: MousePointerClick,
+      iconColor: "text-cyan-600",
+      bgClass: "bg-cyan-100",
+      borderClass: "border-cyan-400",
+      value: "~50",
+      title: "Acessos mensais",
+      description: "Visitantes explorando nossa plataforma"
+    }
+  ];
 
   return (
     <div className="min-h-screen crayon-scribbles film-grain dreamy">
@@ -355,6 +430,34 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section id="achievements" className="py-24 px-4 bg-purple-50/60">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl vintage-heading mb-6 text-gray-800">Nossas Conquistas 🏆</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto retro-text">
+              Veja o impacto que já causamos na vida de várias pessoas. Cada número representa uma história de aprendizado! ✨
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {achievementsList.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="vintage-card !bg-yellow-100 p-8 text-center rounded-2xl shadow-sm hover:-translate-y-2 transition-transform duration-300">
+                  <div className={`w-16 h-16 ${stat.bgClass} rounded-full flex items-center justify-center mx-auto mb-4 border-2 ${stat.borderClass}`}>
+                    <IconComponent className={`w-8 h-8 ${stat.iconColor}`} />
+                  </div>
+                  <h3 className="text-4xl font-bold text-gray-800 mb-2 vintage-heading">{stat.value}</h3>
+                  <p className="text-gray-800 font-bold retro-text text-lg">{stat.title}</p>
+                  <p className="text-sm text-gray-600 mt-2 retro-text">{stat.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
