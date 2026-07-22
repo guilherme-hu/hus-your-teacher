@@ -373,7 +373,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               size="lg"
-              className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text photo-border"
+              className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
               asChild
             >
               <a
@@ -501,14 +501,25 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-16">
+          <div className="mt-16 flex flex-col items-center justify-center gap-6">
             <Button
               size="lg"
-              className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-xl px-16 py-8 retro-text shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-pink-100"
+              className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-xl px-16 py-8 retro-text shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-pink-100 w-full sm:w-auto min-w-[320px]"
               asChild
             >
               <Link href="/membros">
                 👥 Meet All Members ✨
+              </Link>
+            </Button>
+            <Button
+              size="lg"
+              className="bg-yellow-100 text-gray-800 hover:bg-yellow-200 text-xl px-16 py-8 retro-text shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-pink-200 w-full sm:w-auto min-w-[320px]"
+              asChild
+            >
+              <Link href="/voluntariado" className="flex items-center justify-center">
+                <Heart className="w-6 h-6 mr-3 shrink-0" />
+                <span>Quero Ser Voluntário!</span>
+                <Heart className="w-6 h-6 ml-3 shrink-0" />
               </Link>
             </Button>
           </div>
@@ -550,7 +561,7 @@ export default function HomePage() {
             </div>
             <div>
               <h4 className="vintage-heading mb-6">Contato 📞</h4>
-              <p className="text-yellow-200 mb-3 retro-text">Perguntas ou sugestões? 💭</p>
+              <p className="text-yellow-200 mb-3 retro-text">@husyourteacher 📸</p>
               <p className="text-yellow-200 retro-text">husyouteacher@gmail.com 📧</p>
             </div>
           </div>

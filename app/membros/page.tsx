@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
+import { Heart } from "lucide-react"
 
 const coreTeam = [
   {
@@ -31,7 +32,7 @@ const coreTeam = [
 
 const areas = [
   {
-    label: "Teachers",
+    label: "Teaching",
     icon: "🍎",
     description: "Responsáveis por ministrar as aulas online, criando um ambiente de aprendizado interativo e acolhedor para os alunos.",
     members: [
@@ -49,13 +50,13 @@ const areas = [
         avatar: "/placeholder_profile.jpg",
         icon: "🌟",
       },
-      {
-        name: "Clara R.",
-        role: "Curriculum Development Coordinator & Teacher",
-        description: "",
-        avatar: "/members/clara.jpeg",
-        icon: "🌟",
-      },
+      // {
+      //   name: "Clara R.",
+      //   role: "Curriculum Development Coordinator & Teacher",
+      //   description: "",
+      //   avatar: "/members/clara.jpeg",
+      //   icon: "🌟",
+      // },
       {
         name: "Lina M.",
         role: "Teacher",
@@ -77,13 +78,13 @@ const areas = [
     icon: "📝",
     description: "Planejam e desenvolvem os materiais didáticos e atividades utilizados nas aulas e disponibilizados gratuitamente no site.",
     members: [
-        {
-        name: "Clara R.",
-        role: "Curriculum Development Coordinator & Teacher",
-        description: "",
-        avatar: "/members/clara.jpeg",
-        icon: "🌟",
-        },
+        // {
+        // name: "Clara R.",
+        // role: "Curriculum Development Coordinator & Teacher",
+        // description: "",
+        // avatar: "/members/clara.jpeg",
+        // icon: "🌟",
+        // },
         {
         name: "Bruna B.",
         role: "Curriculum Development Member",
@@ -256,19 +257,30 @@ export default function MembrosPage() {
       <section className="py-16 px-4 bg-pink-400 vignette text-center">
         <h3 className="text-4xl vintage-heading text-white mb-6">Quer fazer parte? 🌟</h3>
         <p className="text-white/90 retro-text text-lg mb-8 max-w-xl mx-auto">
-          Adoraríamos ter você como voluntário! Entre em contato com a gente, pode ser por email ou por meio de nossa conta do Instagram! 💌
+          Adoraríamos ter você como voluntário! Acesse nossa página de voluntariado para saber mais, ou entre em contato com a gente por email ou Instagram! 💌
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center flex-wrap">
           <Button
             size="lg"
-            className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-lg px-10 py-8 retro-text photo-border"
+            className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
+            asChild
+          >
+            <Link href="/voluntariado" className="flex items-center justify-center">
+              <Heart className="w-5 h-5 mr-3 shrink-0" />
+              <span>Saiba como ser Voluntário!</span>
+              <Heart className="w-5 h-5 ml-3 shrink-0" />
+            </Link>
+          </Button>
+          <Button
+            size="lg"
+            className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
             asChild
           >
             <a href="mailto:husyouteacher@gmail.com">husyouteacher@gmail.com 📧</a>
           </Button>
           <Button
             size="lg"
-            className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-lg px-10 py-8 retro-text photo-border"
+            className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
             asChild
           >
             <a href="https://www.instagram.com/husyourteacher/" target="_blank" rel="noreferrer noopener">
