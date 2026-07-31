@@ -447,11 +447,36 @@ export default function MateriaisPage() {
       icon: "🏃",
       category: "Vocabulário",
       filePath: "/downloads/Action Verbs.pdf"
+    },
+    {
+      title: "Professions Around Us",
+      description: "Vocabulário sobre profissões comuns",
+      level: "Iniciante",
+      icon: "👩‍⚕️",
+      category: "Vocabulário",
+      filePath: "/downloads/Professions Around Us.pdf"
+    },
+    {
+      title: "Study Planner - Horizontal",
+      description: "Plano de estudo horizontal para organizar seu tempo de aprendizado",
+      level: "Iniciante",
+      icon: "🗓️",
+      category: "Organização",
+      filePath: "/downloads/study planner horizontal.pdf"
+    },
+    {
+      title: "Study Planner - Vertical",
+      description: "Plano de estudo vertical para organizar seu tempo de aprendizado",
+      level: "Iniciante",
+      icon: "🗓️",
+      category: "Organização",
+      filePath: "/downloads/study planner vertical.pdf"
     }
+
 
   ];
 
-  const categories = ["Todos", "Gramática", "Vocabulário", "Leitura", "Escrita", "Atividades"];
+  const categories = ["Todos", "Gramática", "Vocabulário", "Leitura", "Escrita", "Atividades", "Organização"];
 
   const filteredSheets = learningSheets.filter(sheet => {
     const matchesSearch = sheet.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
