@@ -471,6 +471,14 @@ export default function MateriaisPage() {
       icon: "🗓️",
       category: "Organização",
       filePath: "/downloads/study planner vertical.pdf"
+    },
+    {
+      title: "Read, Think & React",
+      description: "Atividade de interpretação de texto",
+      level: "Iniciante",
+      icon: "🗓️",
+      category: "Atividades",
+      filePath: "/downloads/Read, Think & React.pdf"
     }
 
 
