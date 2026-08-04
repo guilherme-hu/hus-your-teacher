@@ -361,8 +361,6 @@ export default function HomePage() {
             <p className="text-xl mb-12 text-gray-600 retro-text">
               Horários de aula:
               <br />
-              - Turma Básico II: Terça-feira, 18:00-19:00
-              <br />
               - Turma Básico I: Quarta-feira, 17:00-18:00
               <br />
               - Turma Básico I: Sábado, 15:00-16:00 
