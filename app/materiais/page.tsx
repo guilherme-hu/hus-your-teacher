@@ -286,7 +286,7 @@ export default function MateriaisPage() {
       level: "Iniciante",
       icon: "🕰️",
       category: "Gramática",
-      filePath: "/downloads/present perfect x present perfect continuous.pdf"
+      filePath: "/downloads/present perfect x present perfect continous.pdf"
     },
     {
       title: "Past Simple Vs Present Perfect",
@@ -481,12 +481,12 @@ export default function MateriaisPage() {
       filePath: "/downloads/Read, Think & React.pdf"
     },
     {
-      title: "Enviroment and Sustainability",
+      title: "Environment and Sustainability",
       description: "Vocabulário sobre o meio ambiente e a sustentabilidade",
       level: "Iniciante",
-      icon: "🗓️",
+      icon: "🌱",
       category: "Vocabulário",
-      filePath: "/downloads/Enviroment and Sustainability.pdf"
+      filePath: "/downloads/Environment and Sustainability.pdf"
     },
 
 
