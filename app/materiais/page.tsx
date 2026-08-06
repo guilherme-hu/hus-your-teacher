@@ -479,7 +479,15 @@ export default function MateriaisPage() {
       icon: "🗓️",
       category: "Atividades",
       filePath: "/downloads/Read, Think & React.pdf"
-    }
+    },
+    {
+      title: "Enviroment and Sustainability",
+      description: "Vocabulário sobre o meio ambiente e a sustentabilidade",
+      level: "Iniciante",
+      icon: "🗓️",
+      category: "Vocabulário",
+      filePath: "/downloads/Enviroment and Sustainability.pdf"
+    },
 
 
   ];

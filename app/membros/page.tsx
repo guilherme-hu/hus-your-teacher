@@ -93,12 +93,19 @@ const areas = [
         icon: "🌟",
         },
         {
+        name: "Isabele A.",
+        role: "Curriculum Development Member",
+        description: "",
+        avatar: "/members/isabele.jpeg",
+        icon: "🌟",
+        },
+        {
         name: "Juliana L.",
         role: "Curriculum Development Member and Consultant",
         description: "",
         avatar: "/placeholder_profile.jpg",
         icon: "🌟",
-      },
+        },
     ],
   },
   {
@@ -126,6 +133,20 @@ const areas = [
         role: "Ambassador",
         description: "",
         avatar: "/members/camila.jpeg",
+        icon: "🌟",
+        },
+        {
+        name: "Carol S.",
+        role: "Ambassador",
+        description: "",
+        avatar: "/members/carol.jpeg",
+        icon: "🌟",
+        },
+        {
+        name: "Tamires F.",
+        role: "Ambassador",
+        description: "",
+        avatar: "/members/tamires.jpeg",
         icon: "🌟",
         },
         {
