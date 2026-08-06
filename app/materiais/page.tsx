@@ -583,45 +583,49 @@ export default function MateriaisPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSheets.length > 0 ? (
-              filteredSheets.map((sheet, index) => (
-                <Card
-                  key={index}
-                  className="vintage-card scrapbook-tape hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-                >
-                  <CardHeader className="relative">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex gap-2">
-                        <Badge variant="secondary" className="text-xs bg-cream-200 text-gray-700 retro-text">
-                          {sheet.level}
-                        </Badge>
-                        <Badge variant="outline" className="text-xs border-pink-300 text-pink-600 retro-text">
-                          {sheet.category}
-                        </Badge>
+              filteredSheets.map((sheet, index) => {
+                const downloadHref = encodeURI(sheet.filePath);
+
+                return (
+                  <Card
+                    key={index}
+                    className="vintage-card scrapbook-tape hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+                  >
+                    <CardHeader className="relative">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex gap-2">
+                          <Badge variant="secondary" className="text-xs bg-cream-200 text-gray-700 retro-text">
+                            {sheet.level}
+                          </Badge>
+                          <Badge variant="outline" className="text-xs border-pink-300 text-pink-600 retro-text">
+                            {sheet.category}
+                          </Badge>
+                        </div>
+                        {/* Contador de downloads no canto superior direito */}
+                        {downloads[sheet.filePath] ? (
+                          <span className="absolute top-2 right-3 flex items-center gap-1 bg-white/80 px-2 py-1 rounded-full shadow text-gray-500 text-xs font-semibold retro-text z-10">
+                            <Download className="w-3 h-3 text-gray-400" />
+                            {downloads[sheet.filePath]}
+                          </span>
+                        ) : null}
                       </div>
-                      {/* Contador de downloads no canto superior direito */}
-                      {downloads[sheet.filePath] ? (
-                        <span className="absolute top-2 right-3 flex items-center gap-1 bg-white/80 px-2 py-1 rounded-full shadow text-gray-500 text-xs font-semibold retro-text z-10">
-                          <Download className="w-3 h-3 text-gray-400" />
-                          {downloads[sheet.filePath]}
-                        </span>
-                      ) : null}
-                    </div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">{sheet.icon}</span>
-                      <CardTitle className="text-lg text-gray-800 vintage-heading">{sheet.title}</CardTitle>
-                    </div>
-                    <CardDescription className="text-gray-600 retro-text">{sheet.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button className="w-full vintage-btn retro-text" asChild onClick={() => handleDownload(sheet.filePath)}>
-                      <a href={sheet.filePath} download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Baixar PDF 📥
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-2xl">{sheet.icon}</span>
+                        <CardTitle className="text-lg text-gray-800 vintage-heading">{sheet.title}</CardTitle>
+                      </div>
+                      <CardDescription className="text-gray-600 retro-text">{sheet.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Button className="w-full vintage-btn retro-text" asChild onClick={() => handleDownload(sheet.filePath)}>
+                        <a href={downloadHref} download>
+                          <Download className="w-4 h-4 mr-2" />
+                          Baixar PDF 📥
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                );
+              })
             ) : (
               <div className="col-span-full text-center py-12">
                 <p className="text-xl text-gray-500 retro-text">Nenhum material encontrado... 😢</p>
