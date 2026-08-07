@@ -11,7 +11,7 @@ const coreTeam = [
     name: "Jessie Hu",
     role: "Chief Executive Officer",
     description: "Organização e gerência geral do projeto",
-    avatar: "/dudu.jpeg",
+    avatar: "/members/jessie.jpeg",
     icon: "🎓",
   },
   {
@@ -103,7 +103,7 @@ const areas = [
         name: "Juliana L.",
         role: "Curriculum Development Member and Consultant",
         description: "",
-        avatar: "/placeholder_profile.jpg",
+        avatar: "/members/juliana.jpeg",
         icon: "🌟",
         },
     ],

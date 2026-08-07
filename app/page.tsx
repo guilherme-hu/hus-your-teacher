@@ -83,7 +83,7 @@ export default function HomePage() {
       name: "Jessie Hu",
       role: "Chief Executive Officer",
       description: "Organização e gerência geral do projeto",
-      avatar: "/dudu.jpeg?height=100&width=100",
+      avatar: "/members/jessie.jpeg?height=100&width=100",
       icon: "🎓",
     },
     {
