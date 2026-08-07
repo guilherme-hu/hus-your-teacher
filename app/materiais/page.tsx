@@ -488,6 +488,14 @@ export default function MateriaisPage() {
       category: "Vocabulário",
       filePath: "/downloads/Environment and Sustainability.pdf"
     },
+    {
+      title: "Family Vocabulary",
+      description: "Vocabulário sobre a família",
+      level: "Iniciante",
+      icon: "👨‍👩‍👧‍👦",
+      category: "Vocabulário",
+      filePath: "/downloads/Family Vocabulary.pdf"
+    },
 
 
   ];
