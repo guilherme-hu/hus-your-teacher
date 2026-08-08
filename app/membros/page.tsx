@@ -106,6 +106,13 @@ const areas = [
         avatar: "/members/juliana.jpeg",
         icon: "🌟",
         },
+        {
+        name: "Marielly N.",
+        role: "Curriculum Development Member",
+        description: "",
+        avatar: "/placeholder_profile.jpg",
+        icon: "🌟",
+        },
     ],
   },
   {
