@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { Heart } from "lucide-react"
+import type { ReactNode } from "react"
 
 const coreTeam = [
   {
@@ -86,13 +87,6 @@ const areas = [
         icon: "🌟",
         },
         {
-        name: "Bruna B.",
-        role: "Curriculum Development Member",
-        description: "",
-        avatar: "/members/bruna.jpeg",
-        icon: "🌟",
-        },
-        {
         name: "Isabele A.",
         role: "Curriculum Development Member",
         description: "",
@@ -118,13 +112,26 @@ const areas = [
   {
     label: "Communication & Marketing",
     icon: "📣",
-    description: "Cuidam da divulgação do projeto nas redes sociais e do design visual da marca, ampliando o alcance do Hu's Your Teacher.",
+    description: (
+      <>
+        <span className="font-semibold text-pink-600">Content Creators</span>
+        <br />
+        Cuidam da divulgação do projeto nas redes sociais e do design visual da marca, ampliando o alcance do Hu&apos;s Your Teacher.
+      </>
+    ),
     members: [
         {
         name: "Brenda T.",
         role: "Communication & Marketing Coordinator",
         description: "",
         avatar: "/members/brenda.jpeg",
+        icon: "🌟",
+        },
+        {
+        name: "Evelly S.",
+        role: "Communication & Marketing Member",
+        description: "",
+        avatar: "/members/evelly.jpeg",
         icon: "🌟",
         },
 
@@ -172,7 +179,7 @@ const areas = [
 type Member = {
   name: string
   role: string
-  description: string
+  description: ReactNode
   avatar: string
   icon: string
 }
