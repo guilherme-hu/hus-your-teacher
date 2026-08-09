@@ -31,7 +31,19 @@ const coreTeam = [
   },
 ]
 
-const areas = [
+type Area = {
+  label: string
+  icon: string
+  description?: ReactNode
+  members?: Member[]
+  subareas?: Array<{
+    label: string
+    description?: ReactNode
+    members: Member[]
+  }>
+}
+
+const areas: Area[] = [
   {
     label: "Teaching",
     icon: "🍎",
@@ -51,13 +63,6 @@ const areas = [
         avatar: "/placeholder_profile.jpg",
         icon: "🌟",
       },
-      // {
-      //   name: "Clara R.",
-      //   role: "Curriculum Development Coordinator & Teacher",
-      //   description: "",
-      //   avatar: "/members/clara.jpeg",
-      //   icon: "🌟",
-      // },
       {
         name: "Lina M.",
         role: "Teacher",
@@ -112,65 +117,74 @@ const areas = [
   {
     label: "Communication & Marketing",
     icon: "📣",
-    description: (
-      <>
-        <span className="font-semibold text-pink-600">Content Creators</span>
-        <br />
-        Cuidam da divulgação do projeto nas redes sociais e do design visual da marca, ampliando o alcance do Hu&apos;s Your Teacher.
-      </>
-    ),
-    members: [
-        {
-        name: "Brenda T.",
-        role: "Communication & Marketing Coordinator",
-        description: "",
-        avatar: "/members/brenda.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Evelly S.",
-        role: "Communication & Marketing Member",
-        description: "",
-        avatar: "/members/evelly.jpeg",
-        icon: "🌟",
-        },
-
-    ],
-  },
-  {
-    label: "Ambassadors",
-    icon: "🤝",
-    description: "Representam e divulgam o projeto em suas comunidades, conectando novos alunos e parceiros ao Hu's Your Teacher.",
-    members: [
-        {
-        name: "Camila T.",
-        role: "Ambassador",
-        description: "",
-        avatar: "/members/camila.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Carol S.",
-        role: "Ambassador",
-        description: "",
-        avatar: "/members/carol.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Tamires F.",
-        role: "Ambassador",
-        description: "",
-        avatar: "/members/tamires.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Thayllane B.",
-        role: "Ambassador",
-        description: "",
-        avatar: "/members/thayllane.jpeg",
-        icon: "🌟",
-        },
-
+    description: "Responsáveis por divulgar o projeto, fortalecer a marca e conectar novas pessoas ao Hu's Your Teacher.",
+    subareas: [
+      {
+        label: "Content Creators",
+        description: (
+          <>
+            <span className="font-semibold text-pink-600">Content Creators</span>
+            <br />
+            Cuidam da divulgação do projeto nas redes sociais e do design visual da marca, ampliando o alcance do Hu's Your Teacher.
+          </>
+        ),
+        members: [
+          {
+            name: "Brenda T.",
+            role: "Communication & Marketing Coordinator",
+            description: "",
+            avatar: "/members/brenda.jpeg",
+            icon: "🌟",
+          },
+          {
+            name: "Evelly S.",
+            role: "Communication & Marketing Member",
+            description: "",
+            avatar: "/members/evelly.jpeg",
+            icon: "🌟",
+          },
+        ],
+      },
+      {
+        label: "Ambassadors",
+        description: (
+          <>
+            <span className="font-semibold text-pink-600">Ambassadors</span>
+            <br />
+            Representam e divulgam o projeto em suas comunidades, conectando novos alunos e parceiros ao Hu's Your Teacher.
+          </>
+        ),
+        members: [
+          {
+            name: "Camila T.",
+            role: "Ambassador",
+            description: "",
+            avatar: "/members/camila.jpeg",
+            icon: "🌟",
+          },
+          {
+            name: "Carol S.",
+            role: "Ambassador",
+            description: "",
+            avatar: "/members/carol.jpeg",
+            icon: "🌟",
+          },
+          {
+            name: "Tamires F.",
+            role: "Ambassador",
+            description: "",
+            avatar: "/members/tamires.jpeg",
+            icon: "🌟",
+          },
+          {
+            name: "Thayllane B.",
+            role: "Ambassador",
+            description: "",
+            avatar: "/members/thayllane.jpeg",
+            icon: "🌟",
+          },
+        ],
+      },
     ],
   },
 
@@ -274,7 +288,29 @@ export default function MembrosPage() {
                   <p className="text-gray-500 retro-text mt-3 max-w-xl mx-auto">{area.description}</p>
                 )}
               </div>
-              {area.members.length > 0 ? (
+
+              {area.subareas ? (
+                <div className="space-y-12">
+                  {area.subareas.map((subarea) => (
+                    <div key={subarea.label}>
+                      {subarea.description && (
+                        <div className="text-center mb-8">
+                          <p className="text-gray-500 retro-text max-w-2xl mx-auto">{subarea.description}</p>
+                        </div>
+                      )}
+                      {subarea.members.length > 0 ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+                          {subarea.members.map((member, index) => (
+                            <MemberCard key={index} member={member} />
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-center text-gray-400 retro-text italic">Em breve... 🌱</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : area.members && area.members.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
                   {area.members.map((member, index) => (
                     <MemberCard key={index} member={member} />
