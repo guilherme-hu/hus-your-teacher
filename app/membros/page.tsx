@@ -187,6 +187,21 @@ const areas: Area[] = [
       },
     ],
   },
+  {
+    label: "Outreach & Community Engagement",
+    icon: "🤝",
+    description: "Responsáveis por estabelecer parcerias, engajar a comunidade e expandir o impacto do projeto, conectando pessoas e recursos para fortalecer a missão do Hu's Your Teacher.",
+    members: [
+        {
+        name: "Valentina C.",
+        role: "Outreach & Community Engagement Member",
+        description: "",
+        avatar: "/members/valentina.jpeg",
+        icon: "🌟",
+        },
+       
+    ],
+  },
 
 ]
 
