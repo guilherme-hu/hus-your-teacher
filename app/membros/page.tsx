@@ -57,6 +57,13 @@ const areas: Area[] = [
       //   icon: "🌟",
       // },
       {
+        name: "Nicole R.",
+        role: "Teaching Coordinator",
+        description: "",
+        avatar: "/members/nicole.jpeg",
+        icon: "🌟",
+      },
+      {
         name: "Carmen B.",
         role: "Teaching Management Officer",
         description: "",
@@ -68,13 +75,6 @@ const areas: Area[] = [
         role: "Teacher",
         description: "",
         avatar: "/placeholder_profile.jpg",
-        icon: "🌟",
-      },
-      {
-        name: "Nicole R.",
-        role: "Teacher",
-        description: "",
-        avatar: "/members/nicole.jpeg",
         icon: "🌟",
       },
     ],
