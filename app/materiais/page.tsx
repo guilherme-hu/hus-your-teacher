@@ -496,6 +496,14 @@ export default function MateriaisPage() {
       category: "Vocabulário",
       filePath: "/downloads/Family Vocabulary.pdf"
     },
+    {
+      title: "Modal Verbs",
+      description: "Regras gramaticais para os verbos modais em inglês",
+      level: "Iniciante",
+      icon: "📝",
+      category: "Gramática",
+      filePath: "/downloads/Modal Verbs.pdf"
+    },
 
 
   ];
