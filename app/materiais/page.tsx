@@ -504,6 +504,14 @@ export default function MateriaisPage() {
       category: "Gramática",
       filePath: "/downloads/Modal Verbs.pdf"
     },
+    {
+      title: "Homework 1",
+      description: "Exercício de casa de volta às aulas!",
+      level: "Iniciante",
+      icon: "📝",
+      category: "Atividades",
+      filePath: "/downloads/Homework_1.pdf"
+    },
 
 
   ];
