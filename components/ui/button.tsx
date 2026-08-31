@@ -18,12 +18,31 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+
+        /* --- variantes do Hu's Your Teacher ---------------------------------
+           Antes essas combinações viviam como strings de ~140 caracteres
+           coladas em cada `className`, repetidas entre páginas. Ver a paleta e
+           o design system no CLAUDE.md. */
+
+        /** Rosa em gradiente com borda escura. O CTA principal. */
+        vintage: "vintage-btn",
+        /** Amarelo. CTA secundário de destaque (formulários). */
+        sunny:
+          "bg-yellow-300 text-gray-900 hover:bg-yellow-400 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300",
+        /** Rosa claro. CTA terciário sobre fundos escuros ou rosa. */
+        blush:
+          "bg-pink-100 text-pink-800 hover:bg-pink-200 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300",
+        /** Contorno rosa com moldura polaroid. */
+        polaroid:
+          "border-2 border-pink-400 text-pink-800 hover:bg-pink-50 photo-border",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+        /** Botão grande de CTA, com altura livre e texto que quebra linha. */
+        cta: "text-lg md:text-xl px-10 md:px-12 py-8 h-auto whitespace-normal retro-text",
       },
     },
     defaultVariants: {

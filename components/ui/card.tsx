@@ -29,11 +29,16 @@ const CardHeader = React.forwardRef<
 ))
 CardHeader.displayName = "CardHeader"
 
+/**
+ * `as` permite renderizar o título como heading de verdade (`as="h3"`) quando o
+ * card é uma seção navegável. O padrão continua `div`, como no shadcn, para não
+ * poluir a árvore de headings em listas longas de cards.
+ */
 const CardTitle = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
+  React.HTMLAttributes<HTMLDivElement> & { as?: "div" | "h2" | "h3" | "h4" }
+>(({ className, as: Comp = "div", ...props }, ref) => (
+  <Comp
     ref={ref}
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
