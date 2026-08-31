@@ -3,219 +3,23 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-import { Logo } from "@/components/logo"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { Reveal } from "@/components/reveal"
+import { areas, coreTeam, type Member } from "@/lib/data/equipe"
 import { Heart } from "lucide-react"
-import type { ReactNode } from "react"
+import { CONTATO, LINK_EXTERNO } from "@/lib/site"
 
-const coreTeam = [
-  {
-    name: "Jessie Hu",
-    role: "Chief Executive Officer",
-    description: "Organização e gerência geral do projeto",
-    avatar: "/members/jessie.jpeg",
-    icon: "🎓",
-  },
-  {
-    name: "Emily Hu",
-    role: "Chief Marketing Officer",
-    description: "Divulgação e design do projeto",
-    avatar: "/bonnie.jpeg",
-    icon: "🎨",
-  },
-  {
-    name: "Guilherme Hu",
-    role: "Chief Technology Officer",
-    description: "Desenvolvimento e manutenção do site",
-    avatar: "/bingo.jpeg",
-    icon: "💻",
-  },
-]
-
-type Area = {
-  label: string
-  icon: string
-  description?: ReactNode
-  members?: Member[]
-  subareas?: Array<{
-    label: string
-    description?: ReactNode
-    members: Member[]
-  }>
+export const metadata = {
+  title: "Nossa Equipe",
+  description:
+    "Conheça os voluntários por trás do Hu&apos;s Your Teacher — Teaching, Curriculum Development, Communication & Marketing e Outreach.",
 }
 
-const areas: Area[] = [
-  {
-    label: "Teaching",
-    icon: "🍎",
-    description: "Responsáveis por ministrar as aulas online, criando um ambiente de aprendizado interativo e acolhedor para os alunos.",
-    members: [
-      // {
-      //   name: "Nome",
-      //   role: "Cargo",
-      //   description: "Descrição",
-      //   avatar: "/foto.jpeg",
-      //   icon: "🌟",
-      // },
-      {
-        name: "Nicole R.",
-        role: "Teaching Coordinator",
-        description: "",
-        avatar: "/members/nicole.jpeg",
-        icon: "🌟",
-      },
-      {
-        name: "Carmen B.",
-        role: "Teaching Management Officer",
-        description: "",
-        avatar: "/placeholder_profile.jpg",
-        icon: "🌟",
-      },
-      {
-        name: "Lina M.",
-        role: "Teacher",
-        description: "",
-        avatar: "/placeholder_profile.jpg",
-        icon: "🌟",
-      },
-    ],
-  },
-  {
-    label: "Curriculum Development",
-    icon: "📝",
-    description: "Planejam e desenvolvem os materiais didáticos e atividades utilizados nas aulas e disponibilizados gratuitamente no site.",
-    members: [
-        {
-        name: "Maria Clara A.",
-        role: "Curriculum Development Coordinator",
-        description: "",
-        avatar: "/members/maria.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Isabele A.",
-        role: "Curriculum Development Member",
-        description: "",
-        avatar: "/members/isabele.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Juliana L.",
-        role: "Curriculum Development Member and Consultant",
-        description: "",
-        avatar: "/members/juliana.jpeg",
-        icon: "🌟",
-        },
-        {
-        name: "Marielly N.",
-        role: "Curriculum Development Member",
-        description: "",
-        avatar: "/placeholder_profile.jpg",
-        icon: "🌟",
-        },
-    ],
-  },
-  {
-    label: "Communication & Marketing",
-    icon: "📣",
-    description: "Responsáveis por divulgar o projeto, fortalecer a marca e conectar novas pessoas ao Hu's Your Teacher.",
-    subareas: [
-      {
-        label: "Content Creators",
-        description: (
-          <>
-            <span className="font-semibold text-pink-600">Content Creators</span>
-            <br />
-            Cuidam da divulgação do projeto nas redes sociais e do design visual da marca, ampliando o alcance do Hu's Your Teacher.
-          </>
-        ),
-        members: [
-          {
-            name: "Brenda T.",
-            role: "Communication & Marketing Coordinator",
-            description: "",
-            avatar: "/members/brenda.jpeg",
-            icon: "🌟",
-          },
-          {
-            name: "Evelly S.",
-            role: "Communication & Marketing Member",
-            description: "",
-            avatar: "/members/evelly.jpeg",
-            icon: "🌟",
-          },
-        ],
-      },
-      {
-        label: "Ambassadors",
-        description: (
-          <>
-            <span className="font-semibold text-pink-600">Ambassadors</span>
-            <br />
-            Representam e divulgam o projeto em suas comunidades, conectando novos alunos e parceiros ao Hu's Your Teacher.
-          </>
-        ),
-        members: [
-          {
-            name: "Camila T.",
-            role: "Ambassador",
-            description: "",
-            avatar: "/members/camila.jpeg",
-            icon: "🌟",
-          },
-          {
-            name: "Carol S.",
-            role: "Ambassador",
-            description: "",
-            avatar: "/members/carol.jpeg",
-            icon: "🌟",
-          },
-          {
-            name: "Tamires F.",
-            role: "Ambassador",
-            description: "",
-            avatar: "/members/tamires.jpeg",
-            icon: "🌟",
-          },
-          {
-            name: "Thayllane B.",
-            role: "Ambassador",
-            description: "",
-            avatar: "/members/thayllane.jpeg",
-            icon: "🌟",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Outreach & Community Engagement",
-    icon: "🤝",
-    description: "Responsáveis por estabelecer parcerias, engajar a comunidade e expandir o impacto do projeto, conectando pessoas e recursos para fortalecer a missão do Hu's Your Teacher.",
-    members: [
-        {
-        name: "Valentina C.",
-        role: "Outreach & Community Engagement Member",
-        description: "",
-        avatar: "/members/valentina.jpeg",
-        icon: "🌟",
-        },
-       
-    ],
-  },
-
-]
-
-type Member = {
-  name: string
-  role: string
-  description: ReactNode
-  avatar: string
-  icon: string
-}
 
 function MemberCard({ member }: { member: Member }) {
   return (
-    <Card className="w-full text-center border-0 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 scrapbook-tape overflow-hidden bg-gradient-to-b from-pink-200 via-pink-100 to-pink-200">
+    <Card className="w-full h-full text-center border-0 hover:shadow-2xl scrapbook-tape playful-card overflow-hidden bg-gradient-to-b from-pink-200 via-pink-100 to-pink-200">
       {/* Decorative top strip */}
       <div className="h-2 w-full bg-gradient-to-r from-pink-400 via-rose-400 to-pink-300" />
       <CardHeader className="pt-6">
@@ -229,10 +33,10 @@ function MemberCard({ member }: { member: Member }) {
           />
         </div>
         <div className="flex items-center justify-center gap-2 mb-1">
-          <span className="text-2xl">{member.icon}</span>
+          <span className="text-2xl card-emoji">{member.icon}</span>
           <CardTitle className="text-lg text-gray-800 vintage-heading">{member.name}</CardTitle>
         </div>
-        <CardDescription className="text-rose-500 handwritten font-semibold text-md">{member.role}</CardDescription>
+        <CardDescription className="text-rose-700 handwritten font-semibold text-md">{member.role}</CardDescription>
       </CardHeader>
       {member.description ? (
         <CardContent className="pb-6">
@@ -247,44 +51,34 @@ function MemberCard({ member }: { member: Member }) {
 
 export default function MembrosPage() {
   return (
-    <div className="min-h-screen crayon-scribbles film-grain dreamy">
-      {/* Header */}
-      <header className="border-b border-pink-300 bg-pink-50/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Logo />
-            <div>
-              <h1 className="text-2xl vintage-heading text-gray-800">Hu&apos;s Your Teacher</h1>
-              <p className="text-sm text-pink-600 handwritten italic">Hu cares? We do.</p>
-            </div>
-          </div>
-          <Button variant="outline" className="border-2 border-pink-400 text-pink-700 hover:bg-pink-50 retro-text" asChild>
-            <Link href="/">← Voltar ao Início</Link>
-          </Button>
-        </div>
-      </header>
+    <div className="min-h-screen crayon-scribbles">
+      <SiteHeader />
 
       {/* Page Hero */}
-      <section className="py-20 px-4 bg-pink-400 vignette text-center">
-        <h2 className="text-6xl vintage-heading text-white mb-6">Nossa Família 👨‍👩‍👧‍👦</h2>
-        <p className="text-xl text-white/90 retro-text max-w-2xl mx-auto">
-          Conheça todas as pessoas incríveis que tornam o Hu&apos;s Your Teacher possível. Cada membro traz algo único
-          ao projeto. 💕
-        </p>
+      <section className="py-20 px-4 bg-pink-600 vignette text-center">
+        <Reveal>
+          <h1 className="text-4xl md:text-6xl vintage-heading text-white mb-6">Nossa Família 👨‍👩‍👧‍👦</h1>
+          <p className="text-lg md:text-xl text-white retro-text max-w-2xl mx-auto">
+            Conheça todas as pessoas incríveis que tornam o Hu&apos;s Your Teacher possível. Cada membro traz algo único
+            ao projeto. 💕
+          </p>
+        </Reveal>
       </section>
 
       {/* Core Team */}
       <section className="py-20 px-4 bg-pink-50/60">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <Badge className="mb-4 bg-pink-500 text-white border-0 retro-text text-base px-6 py-2 text-lg">
+          <Reveal className="text-center mb-12">
+            <Badge className="mb-4 bg-pink-600 text-white border-0 retro-text px-6 py-2 text-lg">
               ⭐ Core Team
             </Badge>
-            <p className="text-gray-500 retro-text mt-4">Os fundadores do projeto, responsáveis pela liderança macro do projeto.</p>
-          </div>
+            <p className="text-gray-600 retro-text mt-4">Os fundadores do projeto, responsáveis pela liderança macro do projeto.</p>
+          </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
             {coreTeam.map((member, index) => (
-              <MemberCard key={index} member={member} />
+              <Reveal key={index} delay={index * 120}>
+                <MemberCard member={member} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -295,32 +89,39 @@ export default function MembrosPage() {
         <div className="container mx-auto max-w-6xl space-y-20">
           {areas.map((area) => (
             <div key={area.label}>
-              <div className="text-center mb-10">
-                <Badge className="mb-4 bg-pink-400 text-white border-0 retro-text text-base px-6 py-2">
-                  {area.icon} {area.label}
-                </Badge>
+              <Reveal className="text-center mb-10">
+                {/* O rótulo da área é um h2 de verdade — antes era só um Badge,
+                    então não havia como navegar entre as áreas por heading. */}
+                <h2>
+                  <Badge className="mb-4 bg-pink-600 text-white border-0 retro-text text-base px-6 py-2">
+                    {area.icon} {area.label}
+                  </Badge>
+                </h2>
                 {area.description && (
-                  <p className="text-gray-500 retro-text mt-3 max-w-xl mx-auto">{area.description}</p>
+                  <p className="text-gray-600 retro-text mt-3 max-w-xl mx-auto">{area.description}</p>
                 )}
-              </div>
+              </Reveal>
 
               {area.subareas ? (
                 <div className="space-y-12">
                   {area.subareas.map((subarea) => (
                     <div key={subarea.label}>
-                      {subarea.description && (
-                        <div className="text-center mb-8">
-                          <p className="text-gray-500 retro-text max-w-2xl mx-auto">{subarea.description}</p>
-                        </div>
-                      )}
+                      <Reveal className="text-center mb-8">
+                        <h3 className="font-semibold text-pink-600 retro-text">{subarea.label}</h3>
+                        {subarea.description && (
+                          <p className="text-gray-600 retro-text max-w-2xl mx-auto">{subarea.description}</p>
+                        )}
+                      </Reveal>
                       {subarea.members.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
                           {subarea.members.map((member, index) => (
-                            <MemberCard key={index} member={member} />
+                            <Reveal key={index} delay={index * 80} className="w-full">
+                              <MemberCard member={member} />
+                            </Reveal>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-center text-gray-400 retro-text italic">Em breve... 🌱</p>
+                        <p className="text-center text-gray-500 retro-text italic">Em breve... 🌱</p>
                       )}
                     </div>
                   ))}
@@ -328,11 +129,13 @@ export default function MembrosPage() {
               ) : area.members && area.members.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
                   {area.members.map((member, index) => (
-                    <MemberCard key={index} member={member} />
+                    <Reveal key={index} delay={index * 80} className="w-full">
+                      <MemberCard member={member} />
+                    </Reveal>
                   ))}
                 </div>
               ) : (
-                <p className="text-center text-gray-400 retro-text italic">Em breve... 🌱</p>
+                <p className="text-center text-gray-500 retro-text italic">Em breve... 🌱</p>
               )}
             </div>
           ))}
@@ -340,15 +143,14 @@ export default function MembrosPage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 px-4 bg-pink-400 vignette text-center">
-        <h3 className="text-4xl vintage-heading text-white mb-6">Quer fazer parte? 🌟</h3>
-        <p className="text-white/90 retro-text text-lg mb-8 max-w-xl mx-auto">
+      <section className="py-16 px-4 bg-pink-600 vignette text-center">
+        <h2 className="text-3xl md:text-4xl vintage-heading text-white mb-6">Quer fazer parte? 🌟</h2>
+        <p className="text-white retro-text text-lg mb-8 max-w-xl mx-auto">
           Adoraríamos ter você como voluntário! Acesse nossa página de voluntariado para saber mais, ou entre em contato com a gente por email ou Instagram! 💌
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center flex-wrap">
           <Button
-            size="lg"
-            className="bg-yellow-300 text-gray-800 hover:bg-yellow-400 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
+            variant="sunny" size="cta"
             asChild
           >
             <Link href="/voluntariado" className="flex items-center justify-center">
@@ -358,30 +160,23 @@ export default function MembrosPage() {
             </Link>
           </Button>
           <Button
-            size="lg"
-            className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
+            variant="blush" size="cta"
             asChild
           >
-            <a href="mailto:husyouteacher@gmail.com">husyouteacher@gmail.com 📧</a>
+            <a href={`mailto:${CONTATO.email}`}>{CONTATO.email} 📧</a>
           </Button>
           <Button
-            size="lg"
-            className="bg-pink-200 text-pink-600 hover:bg-pink-300 text-lg px-10 py-8 retro-text rounded-xl shadow-md"
+            variant="blush" size="cta"
             asChild
           >
-            <a href="https://www.instagram.com/husyourteacher/" target="_blank" rel="noreferrer noopener">
-              📸 @husyourteacher
+            <a href={CONTATO.instagram} {...LINK_EXTERNO}>
+              📸 {CONTATO.instagramHandle}
             </a>
           </Button>
         </div>
       </section>
 
-      {/* Mini Footer */}
-      <footer className="py-8 px-4 bg-gray-800 text-center text-yellow-200 retro-text">
-        <p>
-          &copy; {new Date().getFullYear()} Hu&apos;s Your Teacher. Feito com ❤️ para aprendizes em todos os lugares. 🌟
-        </p>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
