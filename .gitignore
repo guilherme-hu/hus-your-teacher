@@ -26,5 +26,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# contador de downloads (era gravado no FS efemero da Vercel)
-downloads.json
+# ferramentas locais do Claude Code (nao versionadas)
+.claude/
+CLAUDE.md
