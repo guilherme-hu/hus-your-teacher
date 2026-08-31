@@ -36,40 +36,25 @@
   }
 }
 
-/* Vintage film grain overlay */
-.film-grain {
-  position: relative;
-}
+/* Fundo creme com rabiscos de giz de cera.
 
-.film-grain::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle at 20% 80%, transparent 50%, rgba(139, 90, 107, 0.1) 100%),
-    radial-gradient(circle at 80% 20%, transparent 50%, rgba(248, 180, 203, 0.1) 100%),
-    radial-gradient(circle at 40% 40%, transparent 50%, rgba(255, 228, 225, 0.1) 100%);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  z-index: 1;
-}
+   Sem `overflow: hidden` aqui de propósito: um ancestral com overflow escondido
+   vira scroll container e quebra o `position: sticky` do header.
 
-/* Cream background with crayon scribbles - more green and blue */
+   Os dois pseudo-elementos são `fixed`, então custam uma tela em vez da altura
+   inteira do documento. Isso depende de NENHUM ancestral (nem este elemento) ter
+   `filter`, `transform` ou `will-change` — qualquer um deles vira o bloco
+   container do `fixed` e o fundo volta a rolar junto. Era o caso do antigo
+   `.dreamy`. */
 .crayon-scribbles {
   background-color: #fefdf8;
   position: relative;
-  overflow: hidden;
 }
 
 .crayon-scribbles::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  inset: 0;
   /* Pink crayon scribbles */
   background-image: radial-gradient(
       ellipse 180px 40px at 15% 25%,
@@ -91,43 +76,41 @@
     /* Wavy crayon lines with more green and blue */
     conic-gradient(from 45deg at 60% 40%, transparent 0deg, #98fb98 10deg, transparent 20deg),
     conic-gradient(from 120deg at 30% 70%, transparent 0deg, #87ceeb 15deg, transparent 30deg),
-    conic-gradient(from 200deg at 70% 30%, transparent 0deg, #f8b4cb 12deg, transparent 25deg);
+    conic-gradient(from 200deg at 70% 30%, transparent 0deg, #f8b4cb 12deg, transparent 25deg),
+    /* Rabiscos orgânicos — antes viviam num segundo pseudo-elemento; foram
+       fundidos aqui com alpha 0.667 para compensar a opacity 0.3 do conjunto. */
+    radial-gradient(ellipse 280px 70px at 20% 60%, transparent 30%, rgba(152, 251, 152, 0.667) 31%, transparent 35%),
+    radial-gradient(ellipse 260px 65px at 80% 80%, transparent 30%, rgba(135, 206, 235, 0.667) 31%, transparent 35%),
+    radial-gradient(ellipse 180px 40px at 50% 20%, transparent 30%, rgba(248, 180, 203, 0.667) 31%, transparent 35%),
+    radial-gradient(ellipse 200px 50px at 70% 50%, transparent 30%, rgba(144, 238, 144, 0.667) 31%, transparent 35%),
+    radial-gradient(ellipse 160px 35px at 30% 30%, transparent 30%, rgba(176, 224, 230, 0.667) 31%, transparent 35%);
   opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
 
+/* Véu creme — substitui o `filter` de página inteira que o `.dreamy` aplicava.
+   Uma camada fixa de cor sólida é praticamente de graça; o `filter` obrigava o
+   navegador a rasterizar o documento inteiro (medido: 1265 x 6702 px) e ainda
+   dessaturava as fotos dos membros. Fica abaixo do header (z-50) e da barra de
+   filtros de /materiais (z-40), que continuam nítidos. */
 .crayon-scribbles::after {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* More organic scribbles with green and blue emphasis */
-  background: radial-gradient(ellipse 280px 70px at 20% 60%, transparent 30%, #98fb98 31%, transparent 35%),
-    radial-gradient(ellipse 260px 65px at 80% 80%, transparent 30%, #87ceeb 31%, transparent 35%),
-    radial-gradient(ellipse 180px 40px at 50% 20%, transparent 30%, #f8b4cb 31%, transparent 35%),
-    radial-gradient(ellipse 200px 50px at 70% 50%, transparent 30%, #90ee90 31%, transparent 35%),
-    radial-gradient(ellipse 160px 35px at 30% 30%, transparent 30%, #b0e0e6 31%, transparent 35%);
-  opacity: 0.2;
-  z-index: 0;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 251, 240, 0.15);
+  z-index: 3;
   pointer-events: none;
 }
 
 /* Handwritten cursive fonts */
+/* A fonte vem do next/font (ver app/layout.tsx). O fallback continua listado
+   para o caso de o webfont falhar. */
 .handwritten {
-  font-family: "Brush Script MT", "Lucida Handwriting", "Apple Chancery", cursive;
-  font-weight: 400;
+  font-family: var(--font-handwritten), "Brush Script MT", "Lucida Handwriting", cursive;
+  font-weight: 500;
   letter-spacing: 0.02em;
   transform: rotate(-1deg);
-}
-
-.cursive-large {
-  font-family: "Brush Script MT", "Lucida Handwriting", "Apple Chancery", cursive;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  transform: rotate(-0.5deg);
 }
 
 /* Vintage western typography */
@@ -213,16 +196,13 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* Dreamy, soft focus effect */
-.dreamy {
-  filter: contrast(0.9) brightness(1.1) saturate(0.9);
-}
-
 /* Vintage card styling */
+/* Sem `backdrop-filter` de propósito: /materiais renderiza 61 destes cards, e
+   cada blur de backdrop obriga o navegador a copiar e desfocar o que está atrás.
+   O fundo aqui é chapado, então o blur não acrescentava nada visível. */
 .vintage-card {
   background: rgba(254, 253, 248, 0.9);
   border: 1px solid #f8b4cb;
-  backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(248, 180, 203, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -270,4 +250,122 @@
 
 .animate-vintage-glow {
   animation: vintage-glow 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Reveal on scroll
+   O estado inicial só esconde quando o JS está ativo (html.js), para que
+   quem estiver sem JS continue enxergando a página inteira.
+   ========================================================================== */
+.reveal {
+  opacity: 1;
+}
+
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+html.js .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Link de navegação com sublinhado que cresce */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background: #ec4899;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Cards mais brincalhões no hover */
+.playful-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.playful-card:hover {
+  transform: translateY(-8px) rotate(-0.6deg);
+}
+
+.playful-card .card-emoji {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.playful-card:hover .card-emoji {
+  transform: scale(1.25) rotate(-8deg);
+}
+
+/* A fita adesiva "descola" um pouco no hover */
+.scrapbook-tape::before {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.playful-card.scrapbook-tape:hover::before {
+  transform: rotate(-11deg) translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Indicador de scroll do hero */
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-hint {
+  animation: scroll-hint 2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Respeitar prefers-reduced-motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentle-float,
+  .animate-vintage-glow,
+  .animate-scroll-hint,
+  .animate-bounce-slow {
+    animation: none !important;
+  }
+
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .playful-card:hover,
+  .playful-card:hover .card-emoji,
+  .playful-card.scrapbook-tape:hover::before {
+    transform: none;
+  }
+
+  .nav-link::after {
+    transition: none;
+  }
 }
