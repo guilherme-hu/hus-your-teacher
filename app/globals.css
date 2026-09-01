@@ -306,8 +306,15 @@ html.js .reveal-visible {
   transform: translateY(-8px) rotate(-0.6deg);
 }
 
+/* `width: fit-content` nao e decoracao: quando o emoji e filho direto de um
+   container flex (o CardHeader do shadcn e `flex flex-col`), o `inline-block`
+   sofre blockificacao e vira `block`, e o span passa a ocupar a largura inteira
+   do card. Ai o `scale(1.25)` do hover empurra 12,5% da largura do CARD para
+   fora de cada lado — o emoji "pulava" para fora. Encolhendo a caixa ate o
+   conteudo, o scale so afeta o emoji. */
 .playful-card .card-emoji {
   display: inline-block;
+  width: fit-content;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
