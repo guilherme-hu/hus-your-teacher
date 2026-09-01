@@ -15,8 +15,10 @@ const linhas = [
  * comprimir nem para manter.
  */
 export function CartaoAcesso() {
+  // `w-full`: dentro de um flex com `items-center` o cartão encolheria até o
+  // conteúdo e ficaria mais estreito que o botão embaixo dele.
   return (
-    <div className="relative mx-auto max-w-sm rotate-1">
+    <div className="relative mx-auto w-full max-w-sm rotate-1">
       <div className="vintage-card photo-border playful-card overflow-hidden rounded-lg">
         {/* Faixa do cabeçalho */}
         <div className="bg-pink-600 px-5 py-3 text-center">
@@ -40,6 +42,15 @@ export function CartaoAcesso() {
               </div>
             ))}
           </dl>
+
+          {/* A assinatura tambem serve de area de pouso para o carimbo: antes ele
+              caia por cima da ultima linha de dados e tapava o valor. */}
+          <div className="mt-5 border-t border-pink-200 pt-4">
+            <p className="retro-text text-[0.65rem] uppercase tracking-widest text-gray-500">
+              Assinatura
+            </p>
+            <p className="handwritten text-xl text-pink-700">Hu cares? We do.</p>
+          </div>
         </div>
       </div>
 

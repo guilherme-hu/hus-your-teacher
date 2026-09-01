@@ -42,7 +42,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
         /** Botão grande de CTA, com altura livre e texto que quebra linha. */
-        cta: "text-lg md:text-xl px-10 md:px-12 py-8 h-auto whitespace-normal retro-text",
+        cta: "text-lg md:text-xl px-10 md:px-12 py-8 h-auto whitespace-normal text-center retro-text",
       },
     },
     defaultVariants: {

@@ -315,8 +315,10 @@ export default function HomePage() {
 
       {/* About Section - IN PORTUGUESE */}
       <section id="about" className="py-24 px-4 scroll-mt-24">
-        <div className="container mx-auto max-w-4xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* `max-w-5xl` em vez de 4xl: com colunas de 392px o texto quebrava demais e
+            a coluna da esquerda ficava 270px mais alta que a do cartão. */}
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <Reveal>
               <p className="handwritten text-xl text-pink-700 mb-3">Como tudo começou</p>
               <h2 className="text-4xl md:text-5xl vintage-heading mb-8 text-gray-800">
@@ -336,7 +338,7 @@ export default function HomePage() {
                 Sem cadastro, sem mensalidade, sem letras miúdas. 📚
               </p>
 
-              <div className="flex flex-wrap items-center gap-6 mb-10">
+              <div className="flex flex-wrap items-center gap-6">
                 <div className="flex items-center gap-3">
                   <Star className="w-6 h-6 text-yellow-500 fill-current" />
                   <span className="text-gray-700 retro-text">Feito para crianças, aberto a todos 👶</span>
@@ -346,14 +348,25 @@ export default function HomePage() {
                   <span className="text-gray-700 retro-text">Feito com amor 💝</span>
                 </div>
               </div>
-
-              <Button variant="vintage" size="cta" asChild>
-                <Link href="/sobre">📖 Conheça nossa história completa</Link>
-              </Button>
             </Reveal>
 
-            <Reveal delay={150}>
+            {/* A coluna estica até a altura da de texto (`items-stretch`, o padrão do
+                grid) e o `justify-between` prende o cartão no topo e o botão no pé —
+                as duas colunas terminam na mesma linha.
+
+                `lg:mt-10` são exatamente os 40px do bloco "Como tudo começou"
+                (28px de line-height + 12px de margem), para o topo do cartão nascer
+                na altura do <h2> e não do olho. Sem `h-full`: com `stretch` o item já
+                preenche a linha descontando a margem, enquanto `height: 100%` a
+                ignoraria e vazaria 40px para baixo. */}
+            <Reveal
+              delay={150}
+              className="flex flex-col items-center justify-between gap-10 lg:mt-10"
+            >
               <CartaoAcesso />
+              <Button variant="vintage" size="cta" className="w-full max-w-sm" asChild>
+                <Link href="/sobre">📖 Conheça nossa história completa</Link>
+              </Button>
             </Reveal>
           </div>
         </div>

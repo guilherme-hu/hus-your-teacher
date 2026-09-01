@@ -181,11 +181,14 @@
 }
 
 /* Vintage button styling */
+/* O texto era #5a5a5a com um text-shadow branco por tras: 4.07:1 sobre o
+   gradiente rosa, reprovado no WCAG AA, e com cara de apagado. #500724 (o
+   pink-950 do Tailwind) da 8.86:1 e mantem o tom da paleta. O text-shadow
+   branco saiu — atras de texto escuro ele so lavava o contorno. */
 .vintage-btn {
   background: linear-gradient(145deg, #f8b4cb, #ffc0cb);
   border: 2px solid #8b5a6b;
-  color: #5a5a5a;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  color: #500724;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
 }
