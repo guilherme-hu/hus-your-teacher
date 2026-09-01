@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/reveal"
 import { CountUp } from "@/components/count-up"
+import { CartaoAcesso } from "@/components/cartao-acesso"
 import { downloadHref, featuredSheets } from "@/lib/data/materiais"
 import { coreTeam } from "@/lib/data/equipe"
 import { FORMULARIOS, LINK_EXTERNO } from "@/lib/site"
@@ -34,9 +35,9 @@ const achievementsList = [
     iconColor: "text-blue-700",
     bgClass: "bg-blue-100",
     borderClass: "border-blue-400",
-    value: "8000+",
-    title: "Perfis Alcançados",
-    description: "Alcance de nossos conteúdos no Instagram"
+    value: "10000+",
+    title: "Alcances nas Redes",
+    description: "Perfis alcançados pelos nossos conteúdos"
   },
   {
     icon: Clock,
@@ -70,7 +71,7 @@ const achievementsList = [
     iconColor: "text-yellow-700",
     bgClass: "bg-yellow-200",
     borderClass: "border-yellow-400",
-    value: "200+",
+    value: "250+",
     title: "Pessoas Impactadas",
     description: "Vidas transformadas pela educação"
   },
@@ -79,9 +80,9 @@ const achievementsList = [
     iconColor: "text-teal-800",
     bgClass: "bg-teal-100",
     borderClass: "border-teal-300",
-    value: "100+",
-    title: "Páginas de Conteúdo",
-    description: "Materiais disponibilizados gratuitamente"
+    value: "150+",
+    title: "Páginas de Material",
+    description: "Conteúdo disponibilizado gratuitamente"
   },
   {
     icon: MousePointerClick,
@@ -317,41 +318,42 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal>
-              <h2 className="text-4xl md:text-5xl vintage-heading mb-8 text-gray-800">Nossa Missão 🎯</h2>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed retro-text">
-                Acreditamos que o aprendizado de idiomas deve ser acessível a todos, independentemente de sua situação
-                econômica. É por isso que criamos o Hu&apos;s Your Teacher - uma plataforma completamente gratuita oferecendo
-                materiais de aprendizado de inglês de alta qualidade. 🌍
+              <p className="handwritten text-xl text-pink-700 mb-3">Como tudo começou</p>
+              <h2 className="text-4xl md:text-5xl vintage-heading mb-8 text-gray-800">
+                De uma sala de igreja para o Brasil 🌏
+              </h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed retro-text">
+                Em 2022, numa sala de igreja em São Paulo, uma das nossas fundadoras passou a dar aulas de
+                inglês de graça todo sábado. Eram crianças e adolescentes da comunidade que não tinham
+                acesso ao idioma em nenhum outro lugar. 🌱
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed retro-text">
+                Quando a faculdade tornou impossível continuar presencialmente, sobrou uma escolha: encerrar
+                ali ou fazer aquele trabalho alcançar mais gente. Você está olhando para a segunda opção. 💛
               </p>
               <p className="text-lg text-gray-700 mb-10 leading-relaxed retro-text">
-                Nossas folhas de trabalho são projetadas pensando nas crianças, mas são perfeitas para aprendizes de
-                todas as idades. Cada folha cobre tópicos importantes de inglês com atividades e explicações. 📝
+                Hoje são materiais gratuitos para baixar, aulas online ao vivo e uma equipe de voluntários.
+                Sem cadastro, sem mensalidade, sem letras miúdas. 📚
               </p>
-              <p className="text-lg text-gray-700 mb-10 leading-relaxed retro-text">
-                Em adição à criação de materiais, também oferecemos aulas online gratuitas para complementar o aprendizado. Nossas aulas são projetadas para serem interativas e de fácil acesso, proporcionando aos alunos a oportunidade de praticar suas habilidades de inglês em um ambiente de apoio. 🌟
-              </p>
-              <div className="flex flex-wrap items-center gap-6">
+
+              <div className="flex flex-wrap items-center gap-6 mb-10">
                 <div className="flex items-center gap-3">
                   <Star className="w-6 h-6 text-yellow-500 fill-current" />
-                  <span className="text-gray-700 retro-text">Design amigável para crianças 👶</span>
+                  <span className="text-gray-700 retro-text">Feito para crianças, aberto a todos 👶</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Heart className="w-6 h-6 text-pink-500 fill-current" />
                   <span className="text-gray-700 retro-text">Feito com amor 💝</span>
                 </div>
               </div>
+
+              <Button variant="vintage" size="cta" asChild>
+                <Link href="/sobre">📖 Conheça nossa história completa</Link>
+              </Button>
             </Reveal>
+
             <Reveal delay={150}>
-              <div className="vintage-card p-10 text-center photo-border scrapbook-corner playful-card">
-                <div className="bg-yellow-100 rounded-lg p-8 photo-border">
-                  <div className="text-4xl mb-4 card-emoji">🎁</div>
-                  <BookOpen className="w-20 h-20 text-gray-600 mx-auto mb-6" />
-                  <h3 className="text-3xl vintage-heading text-gray-800 mb-4">100% Gratuito</h3>
-                  <p className="text-gray-600 retro-text text-lg">
-                    Sem custos ocultos, sem níveis premium. Apenas educação gratuita e de qualidade para todos. 🌟
-                  </p>
-                </div>
-              </div>
+              <CartaoAcesso />
             </Reveal>
           </div>
         </div>

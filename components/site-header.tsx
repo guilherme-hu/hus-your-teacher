@@ -16,7 +16,7 @@ import {
 const navLinks = [
   { href: "/", label: "Início", emoji: "🏠" },
   { href: "/materiais", label: "Materiais", emoji: "📚" },
-  { href: "/#about", label: "Sobre", emoji: "🌟" },
+  { href: "/sobre", label: "Sobre", emoji: "🌟" },
   { href: "/membros", label: "Equipe", emoji: "👨‍👩‍👧‍👦" },
   { href: "/voluntariado", label: "Voluntariado", emoji: "💖" },
 ]

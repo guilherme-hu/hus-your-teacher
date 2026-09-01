@@ -4,7 +4,7 @@ import { CONTATO, LINK_EXTERNO } from "@/lib/site"
 
 const quickLinks = [
   { href: "/materiais", label: "Materiais de Aprendizado 📚" },
-  { href: "/#about", label: "Sobre Nós 🌟" },
+  { href: "/sobre", label: "Sobre Nós 🌟" },
   { href: "/membros", label: "Nossa Equipe 👨‍👩‍👧‍👦" },
   { href: "/voluntariado", label: "Seja Voluntário 💖" },
 ]
