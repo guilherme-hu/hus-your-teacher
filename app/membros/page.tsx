@@ -84,20 +84,16 @@ export default function MembrosPage() {
 
       {/* Core Team */}
       <section className="py-20 px-4 bg-pink-50/60">
-        <div className="container mx-auto max-w-5xl">
+        {/* `max-w-6xl` igual à seção das áreas: com cards de 320px, três deles
+            (1024px + gaps) não cabiam em 5xl e quebravam para 2 + 1. */}
+        <div className="container mx-auto max-w-6xl">
           <Reveal className="text-center mb-12">
             <Badge className="mb-4 bg-pink-600 text-white border-0 retro-text px-6 py-2 text-lg">
               ⭐ Core Team
             </Badge>
             <p className="text-gray-600 retro-text mt-4">Os fundadores do projeto, responsáveis pela liderança macro do projeto.</p>
           </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-            {coreTeam.map((member, index) => (
-              <Reveal key={index} delay={index * 120}>
-                <MemberCard member={member} />
-              </Reveal>
-            ))}
-          </div>
+          <MembrosEmLinha membros={coreTeam} />
         </div>
       </section>
 

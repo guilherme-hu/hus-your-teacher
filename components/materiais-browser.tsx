@@ -87,7 +87,7 @@ export function MateriaisBrowser() {
       <div className="container mx-auto max-w-6xl">
         <div key={selectedCategory} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredSheets.length > 0 ? (
-            filteredSheets.map((sheet, index) => {
+            filteredSheets.map((sheet) => {
               const href = downloadHref(sheet.filePath);
 
               return (
@@ -98,7 +98,6 @@ export function MateriaisBrowser() {
                      recriava 60 IntersectionObservers. A reanimação por troca
                      de categoria vive na key da grid, logo acima. */
                   key={sheet.filePath}
-                  delay={Math.min(index, 8) * 60}
                 >
                   <Card className="vintage-card scrapbook-tape playful-card hover:shadow-xl h-full">
                     <CardHeader className="relative">

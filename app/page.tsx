@@ -236,8 +236,8 @@ export default function HomePage() {
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredSheets.map((sheet, index) => (
-              <Reveal key={index} delay={index * 70}>
+            {featuredSheets.map((sheet) => (
+              <Reveal key={sheet.filePath}>
                 <Card className="vintage-card scrapbook-tape playful-card hover:shadow-xl h-full">
                   <CardHeader className="relative">
                     <div className="flex items-center justify-between mb-3">
