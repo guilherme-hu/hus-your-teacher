@@ -541,6 +541,30 @@ export const learningSheets: Material[] = [
     category: "Atividades",
     filePath: "/downloads/Homework_1.pdf"
   },
+  {
+    title: "Prepositions",
+    description: "Regras gramaticais das preposições in, on e at e das preposições de lugar",
+    level: "Iniciante",
+    icon: "📍",
+    category: "Gramática",
+    filePath: "/downloads/Preposition.pdf"
+  },
+  {
+    title: "Preposition Activity",
+    description: "Pratique in, on, at e as preposições de lugar — com gabarito no fim!",
+    level: "Iniciante",
+    icon: "📍",
+    category: "Atividades",
+    filePath: "/downloads/Preposition Activity.pdf"
+  },
+  {
+    title: "Adjectives",
+    description: "A diferença entre adjetivos de personalidade e de emoção, com vocabulário dos dois",
+    level: "Iniciante",
+    icon: "🎭",
+    category: "Vocabulário",
+    filePath: "/downloads/Adjectives.pdf"
+  },
 
 
 ];
