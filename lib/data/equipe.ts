@@ -130,6 +130,14 @@ export const areas: Area[] = [
     label: "Communication & Marketing",
     icon: "📣",
     description: "Responsáveis por divulgar o projeto, fortalecer a marca e conectar novas pessoas ao Hu's Your Teacher.",
+    members: [
+        {
+          name: "Carol S.",
+          role: "Communication & Marketing Coordinator",
+          avatar: "/members/carol.jpeg",
+          icon: "🌟",
+        },
+    ],
     subareas: [
       {
         label: "Content Creators",
@@ -137,7 +145,7 @@ export const areas: Area[] = [
         members: [
           {
             name: "Brenda T.",
-            role: "Communication & Marketing Coordinator",
+            role: "Communication & Marketing Honorary Member and Advisor",
             avatar: "/members/brenda.jpeg",
             icon: "🌟",
           },
@@ -157,12 +165,6 @@ export const areas: Area[] = [
             name: "Camila T.",
             role: "Ambassador",
             avatar: "/members/camila.jpeg",
-            icon: "🌟",
-          },
-          {
-            name: "Carol S.",
-            role: "Ambassador",
-            avatar: "/members/carol.jpeg",
             icon: "🌟",
           },
           {

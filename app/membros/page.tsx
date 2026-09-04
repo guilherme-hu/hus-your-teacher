@@ -49,6 +49,23 @@ function MemberCard({ member }: { member: Member }) {
   )
 }
 
+/**
+ * Uma fila de cards de membro, centralizada. `flex-wrap` em vez de grid para a
+ * última linha ficar centrada — o que importa quando a fila tem uma pessoa só,
+ * como a coordenação de uma área.
+ */
+function MembrosEmLinha({ membros, className = "" }: { membros: Member[]; className?: string }) {
+  return (
+    <div className={`flex flex-wrap justify-center gap-8 ${className}`}>
+      {membros.map((member, index) => (
+        <Reveal key={member.name} delay={index * 80} className="w-full max-w-xs">
+          <MemberCard member={member} />
+        </Reveal>
+      ))}
+    </div>
+  )
+}
+
 export default function MembrosPage() {
   return (
     <div className="min-h-screen crayon-scribbles">
@@ -102,7 +119,15 @@ export default function MembrosPage() {
                 )}
               </Reveal>
 
-              {area.subareas ? (
+              {/* Quem está ligado direto à área (a coordenação) vem ANTES das
+                  subseções. Antes isto era um if/else — bastava a área ter
+                  `subareas` para o `members` ser descartado, e a coordenadora de
+                  Communication & Marketing não aparecia em lugar nenhum. */}
+              {area.members && area.members.length > 0 && (
+                <MembrosEmLinha membros={area.members} className={area.subareas ? "mb-16" : ""} />
+              )}
+
+              {area.subareas && (
                 <div className="space-y-12">
                   {area.subareas.map((subarea) => (
                     <div key={subarea.label}>
@@ -113,28 +138,16 @@ export default function MembrosPage() {
                         )}
                       </Reveal>
                       {subarea.members.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-                          {subarea.members.map((member, index) => (
-                            <Reveal key={index} delay={index * 80} className="w-full">
-                              <MemberCard member={member} />
-                            </Reveal>
-                          ))}
-                        </div>
+                        <MembrosEmLinha membros={subarea.members} />
                       ) : (
                         <p className="text-center text-gray-500 retro-text italic">Em breve... 🌱</p>
                       )}
                     </div>
                   ))}
                 </div>
-              ) : area.members && area.members.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-                  {area.members.map((member, index) => (
-                    <Reveal key={index} delay={index * 80} className="w-full">
-                      <MemberCard member={member} />
-                    </Reveal>
-                  ))}
-                </div>
-              ) : (
+              )}
+
+              {!area.members?.length && !area.subareas && (
                 <p className="text-center text-gray-500 retro-text italic">Em breve... 🌱</p>
               )}
             </div>

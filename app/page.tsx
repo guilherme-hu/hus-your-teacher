@@ -53,7 +53,7 @@ const achievementsList = [
     iconColor: "text-green-700",
     bgClass: "bg-green-200",
     borderClass: "border-green-400",
-    value: "15+",
+    value: "20+",
     title: "Voluntários",
     description: "Recrutados para auxiliar no projeto"
   },
@@ -164,8 +164,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={320}>
               <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed retro-text">
-                Free, high-quality English learning materials created with love by three cousins. Perfect for kids, great
-                for everyone. No barriers, just learning. 🌈
+                Somos um projeto sem fins lucrativos que visa a democratização do ensino de inglês no Brasil! 🌈
               </p>
             </Reveal>
           </div>
