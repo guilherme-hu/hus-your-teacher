@@ -24,14 +24,14 @@ export const linhaDoTempo: Marco[] = [
     icon: "🌱",
   },
   {
-    quando: "2022 – 2024",
+    quando: "2022 - 2024",
     titulo: "Mais de 50 páginas feitas à mão",
     texto:
       "Por quase dois anos, mais de 10 crianças e adolescentes passaram por aquelas aulas. E nasceram mais de 50 páginas de material didático próprio, escritas sob medida para o nível e as dúvidas de cada aluno.",
     icon: "✏️",
   },
   {
-    quando: "2024",
+    quando: "2025",
     titulo: "A escolha",
     texto:
       "Com o começo da faculdade, manter as aulas presenciais todo sábado virou impossível. Dava para encerrar ali. Em vez disso, ela chamou o primo, estudante de Engenharia de Computação na UFRJ, para construir um lugar onde aquele material continuasse existindo — de graça, para qualquer pessoa.",
