@@ -585,6 +585,14 @@ export const learningSheets: Material[] = [
     categories: ["Gramática"],
     filePath: "/downloads/Verbos regulares x Verbos irregulares.pdf"
   },
+  {
+    title: "Advérbios de causa",
+    description: "Aprenda sobre advérbios de causa e como usá-los em frases",
+    level: "Iniciante",
+    icon: "🔗",
+    categories: ["Gramática"],
+    filePath: "/downloads/Adverbio de causa.pdf"
+  },
 
 
 ];
