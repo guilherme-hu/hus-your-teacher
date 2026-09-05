@@ -14,12 +14,12 @@ import {
 } from "@/components/ui/sheet"
 
 const navLinks = [
-  { href: "/", label: "Início", emoji: "🏠" },
-  { href: "/materiais", label: "Materiais", emoji: "📚" },
-  { href: "/aulas", label: "Aulas", emoji: "💻" },
-  { href: "/sobre", label: "Sobre", emoji: "🌟" },
-  { href: "/membros", label: "Equipe", emoji: "👨‍👩‍👧‍👦" },
-  { href: "/voluntariado", label: "Voluntariado", emoji: "💖" },
+  { href: "/", label: "Início", emoji: "" },
+  { href: "/materiais", label: "Materiais", emoji: "" },
+  { href: "/aulas", label: "Aulas", emoji: "" },
+  { href: "/sobre", label: "Sobre", emoji: "" },
+  { href: "/membros", label: "Equipe", emoji: "" },
+  { href: "/voluntariado", label: "Voluntariado", emoji: "" },
 ]
 
 export function SiteHeader() {

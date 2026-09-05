@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Reveal } from "@/components/reveal"
-import { categories, downloadHref, learningSheets } from "@/lib/data/materiais"
+import { downloadHref, filtros, learningSheets, type Category } from "@/lib/data/materiais"
 
 /**
  * A parte interativa de /materiais: busca, filtros por categoria e a grid.
@@ -25,7 +25,10 @@ export function MateriaisBrowser() {
     return learningSheets.filter((sheet) => {
       const matchesSearch =
         sheet.title.toLowerCase().includes(term) || sheet.description.toLowerCase().includes(term)
-      const matchesCategory = selectedCategory === "Todos" || sheet.category === selectedCategory
+      // Um material pode ter mais de uma classificação (assunto + "Slides"),
+      // então basta uma delas bater com o filtro.
+      const matchesCategory =
+        selectedCategory === "Todos" || sheet.categories.includes(selectedCategory as Category)
 
       return matchesSearch && matchesCategory
     })
@@ -55,7 +58,7 @@ export function MateriaisBrowser() {
               viravam 4 linhas e o header mais a barra grudada comiam 46% da tela.
               A partir de `sm` voltam a quebrar linha e centralizar. */}
           <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 sm:flex-wrap sm:justify-center sm:overflow-x-visible md:gap-3">
-          {categories.map(category => (
+          {filtros.map(category => (
             <Button
               key={category}
               size="sm"
@@ -106,9 +109,15 @@ export function MateriaisBrowser() {
                           <Badge variant="secondary" className="text-xs bg-yellow-100 text-gray-700 retro-text">
                             {sheet.level}
                           </Badge>
-                          <Badge variant="outline" className="text-xs border-pink-300 text-pink-700 retro-text">
-                            {sheet.category}
-                          </Badge>
+                          {sheet.categories.map((categoria) => (
+                            <Badge
+                              key={categoria}
+                              variant="outline"
+                              className="text-xs border-pink-300 text-pink-700 retro-text"
+                            >
+                              {categoria}
+                            </Badge>
+                          ))}
                         </div>
                       </div>
                       <div className="flex items-center gap-3 mb-2">

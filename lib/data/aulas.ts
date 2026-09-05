@@ -40,14 +40,8 @@ export const comoFunciona: ComoFunciona[] = [
   {
     titulo: "Planejadas semestre a semestre",
     texto:
-      "Cada aula, atividade e lição de casa é planejada no começo do semestre, cobrindo gramática, vocabulário do dia a dia, advérbios, preposições e escrita.",
+      "Cada aula, atividade e lição de casa é planejada no começo do semestre, cobrindo gramática, vocabulário do dia a dia, fala e escrita.",
     icon: "🗺️",
-  },
-  {
-    titulo: "Sem obrigação de câmera",
-    texto:
-      "Ligar a câmera é opcional. O que a gente pede é presença de verdade: participar, perguntar e fazer as atividades.",
-    icon: "🎥",
   },
 ]
 
@@ -60,7 +54,7 @@ export type Turma = {
 
 /** Turmas em andamento. Mantenha em sincronia com a seção CTA da home. */
 export const turmas: Turma[] = [
-  { nome: "Turma Básico I", dia: "Quarta-feira", horario: "17:00 – 18:00", nivel: "Iniciante" },
+  { nome: "Turma Básico I", dia: "Quarta-feira", horario: "17:00 - 18:00", nivel: "Iniciante" },
 ]
 
 export type Foto = {

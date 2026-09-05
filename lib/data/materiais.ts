@@ -20,6 +20,8 @@ export type Category =
   | 'Escrita'
   | 'Atividades'
   | 'Organização'
+  /** Formato, não assunto: o material é um deck de slides (páginas em 16:9). */
+  | 'Slides'
 
 export type Material = {
   title: string
@@ -27,7 +29,12 @@ export type Material = {
   level: Level
   /** Emoji mostrado no card. */
   icon: string
-  category: Category
+  /**
+   * Um material pode ter mais de uma classificação: o assunto (Gramática,
+   * Vocabulário…) e, quando for um deck, também 'Slides'. A busca casa se
+   * QUALQUER uma bater com o filtro escolhido.
+   */
+  categories: Category[]
   /** Caminho cru dentro de `public/`. Passe por `downloadHref()` antes de usar. */
   filePath: string
   /** Aparece na amostra da home. */
@@ -42,8 +49,12 @@ export function downloadHref(filePath: string): string {
   return encodeURI(filePath)
 }
 
-/** Opções da barra de filtros de /materiais. `Todos` não é uma categoria real. */
-export const categories: ReadonlyArray<'Todos' | Category> = [
+/**
+ * Opções da barra de filtros de /materiais. `Todos` não é uma categoria real.
+ * Chamado `filtros`, e não `categories`, para não confundir com o campo
+ * `categories` de cada material.
+ */
+export const filtros: ReadonlyArray<'Todos' | Category> = [
   'Todos',
   'Gramática',
   'Vocabulário',
@@ -51,6 +62,7 @@ export const categories: ReadonlyArray<'Todos' | Category> = [
   'Escrita',
   'Atividades',
   'Organização',
+  'Slides',
 ]
 
 export const learningSheets: Material[] = [
@@ -59,7 +71,7 @@ export const learningSheets: Material[] = [
     description: "Compartilhe um pouco de você com esta atividade de boas-vindas!",
     level: "Iniciante",
     icon: "🔤",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Welcome Activity.pdf",
     featured: true,
   },
@@ -68,7 +80,7 @@ export const learningSheets: Material[] = [
     description: "Expressões básicas - cumprimentos e apresentações em inglês",
     level: "Iniciante",
     icon: "👋",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Beginner Lesson.pdf",
     featured: true,
   },
@@ -77,7 +89,7 @@ export const learningSheets: Material[] = [
     description: "Aprenda como nomear alguns animais em inglês.",
     level: "Iniciante",
     icon: "🐾",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Animals.pdf",
     featured: true,
   },
@@ -86,7 +98,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário e atividades sobre animais!",
     level: "Iniciante",
     icon: "🐾",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Animals_vocabulary.pdf",
     featured: true,
   },
@@ -95,7 +107,7 @@ export const learningSheets: Material[] = [
     description: "Atividades sobre profissões em inglês",
     level: "Iniciante",
     icon: "👩‍⚕️",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Professions Exercise.pdf",
     featured: true,
   },
@@ -104,7 +116,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o verbo \"to be\" ",
     level: "Iniciante",
     icon: "📝",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Verb to be.pdf",
     featured: true,
   },
@@ -113,7 +125,7 @@ export const learningSheets: Material[] = [
     description: "Explicação detalhada sobre o verbo \"to be\" e seus usos em inglês",
     level: "Iniciante",
     icon: "📝",
-    category: "Gramática",
+    categories: ["Gramática", "Slides"],
     filePath: "/downloads/O que é o verbo to be.pdf"
   },
   {
@@ -121,7 +133,7 @@ export const learningSheets: Material[] = [
     description: "Pratique o que você aprendeu na última aula! ",
     level: "Iniciante",
     icon: "📖",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Practice Verb to be.pdf"
   },
   {
@@ -129,7 +141,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre sala de aula",
     level: "Iniciante",
     icon: "🗣️",
-    category: "Vocabulário",
+    categories: ["Vocabulário", "Slides"],
     filePath: "/downloads/Classroom Vocabulary.pdf"
   },
   {
@@ -137,7 +149,7 @@ export const learningSheets: Material[] = [
     description: "Resumo sobre vocabulário sobre sala de aula e atividades propostas!",
     level: "Iniciante",
     icon: "🗣️",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Classroom Vocabulary Lesson.pdf"
   },
   {
@@ -145,7 +157,7 @@ export const learningSheets: Material[] = [
     description: "Outra atividade sobre vocabulário de sala de aula!",
     level: "Iniciante",
     icon: "🗣️",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Classroom Vocabulary Activity.pdf"
   },
   {
@@ -153,7 +165,7 @@ export const learningSheets: Material[] = [
     description: "Destaque o que você aprendeu nas últimas aulas e o que foi difícil!",
     level: "Iniciante",
     icon: "✏️",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Resolutions.pdf"
   },
   {
@@ -161,7 +173,7 @@ export const learningSheets: Material[] = [
     description: "Uma introdução ao tempo verbal Simple Present e suas regras gramaticais",
     level: "Iniciante",
     icon: "⏰",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Simple Present - intro.pdf"
   },
   {
@@ -169,7 +181,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o tempo verbal Simple Present",
     level: "Iniciante",
     icon: "⏰",
-    category: "Gramática",
+    categories: ["Gramática", "Slides"],
     filePath: "/downloads/Simple Present.pdf"
   },
   {
@@ -177,7 +189,7 @@ export const learningSheets: Material[] = [
     description: "Resumo sobre o tempo verbal Simple Present e atividades propostas!",
     level: "Iniciante",
     icon: "⏰",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Simple Present Lesson.pdf"
   },
   {
@@ -185,7 +197,7 @@ export const learningSheets: Material[] = [
     description: "Outra atividade para praticar o Simple Present",
     level: "Iniciante",
     icon: "⏰",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Simple Present Practice.pdf"
   },
   {
@@ -193,7 +205,7 @@ export const learningSheets: Material[] = [
     description: "Aprenda as diferenças entre \"do\", \"does\" e \"did\"",
     level: "Iniciante",
     icon: "❓",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Do Does Did.pdf"
   },
   {
@@ -201,7 +213,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o verb \"to do\" e suas contrações",
     level: "Iniciante",
     icon: "❓",
-    category: "Gramática",
+    categories: ["Gramática", "Slides"],
     filePath: "/downloads/verb_to_do.pdf"
   },
   {
@@ -209,7 +221,7 @@ export const learningSheets: Material[] = [
     description: "Pratique a colocação do verb \"to do\" e suas contrações",
     level: "Iniciante",
     icon: "❓",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Verb To Do Practice.pdf"
   },
 
@@ -218,7 +230,7 @@ export const learningSheets: Material[] = [
     description: "Aprenda sobre antônimos em inglês",
     level: "Iniciante",
     icon: "❌",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Antonyms Lesson.pdf"
   },
   {
@@ -226,7 +238,7 @@ export const learningSheets: Material[] = [
     description: "Atividade sobre antônimos em inglês",
     level: "Iniciante",
     icon: "❌",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Antonyms Practice.pdf"
   },
   {
@@ -234,7 +246,7 @@ export const learningSheets: Material[] = [
     description: "Uma introdução ao verbo \"to like\" e suas regras gramaticais",
     level: "Iniciante",
     icon: "❓",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Verb ''To Like''.pdf"
   },
   {
@@ -242,7 +254,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o verbo \"to like\" e suas contrações",
     level: "Iniciante",
     icon: "❓",
-    category: "Gramática",
+    categories: ["Gramática", "Slides"],
     filePath: "/downloads/Verbo To Like.pdf"
   },
   {
@@ -250,7 +262,7 @@ export const learningSheets: Material[] = [
     description: "Complete esta atividade para avaliar o quanto você aprendeu até agora! Não hesite em nos mandá-la para corrigirmos  😉",
     level: "Iniciante",
     icon: "💡",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Progress Check.pdf"
   },
   {
@@ -258,7 +270,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o tempo verbal Past Simple",
     level: "Iniciante",
     icon: "📅",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Past Simple.pdf"
   },
   {
@@ -266,7 +278,7 @@ export const learningSheets: Material[] = [
     description: "Pratique o que você aprendeu na última aula",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Past Simple Practice.pdf"
   },
   {
@@ -274,7 +286,7 @@ export const learningSheets: Material[] = [
     description: "Pratique a colocação de verbos no Past Simple",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Past Simple Practice 2.pdf"
   },
   {
@@ -282,7 +294,7 @@ export const learningSheets: Material[] = [
     description: "Uma introdução ao tempo verbal Present Perfect e suas regras gramaticais",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Present Perfect - intro.pdf"
   },
       {
@@ -290,7 +302,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o tempo verbal Present Perfect",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática", "Slides"],
     filePath: "/downloads/Present Perfect.pdf"
   },
       {
@@ -298,7 +310,7 @@ export const learningSheets: Material[] = [
     description: "Resumo sobre o tempo verbal Present Perfect e atividades propostas!",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Present Perfect Lesson.pdf"
   },
   {
@@ -306,7 +318,7 @@ export const learningSheets: Material[] = [
     description: "Pratique o que você aprendeu na última aula",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Present Perfect Practice.pdf"
   },
   {
@@ -314,7 +326,7 @@ export const learningSheets: Material[] = [
     description: "Comparação entre os tempos verbais Present Perfect e Present Perfect Continuous",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/present perfect x present perfect continous.pdf"
   },
   {
@@ -322,7 +334,7 @@ export const learningSheets: Material[] = [
     description: "Comparação entre os tempos verbais Past Simple e Present Perfect",
     level: "Iniciante",
     icon: "🕰️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Past Simple Vs Present Perfect.pdf"
   },
   {
@@ -330,7 +342,7 @@ export const learningSheets: Material[] = [
     description: "Atividade de compreensão de leitura em inglês",
     level: "Iniciante",
     icon: "📚",
-    category: "Leitura",
+    categories: ["Leitura"],
     filePath: "/downloads/Reading Comprehension.pdf"
   },
   {
@@ -338,7 +350,7 @@ export const learningSheets: Material[] = [
     description: "Interprete o texto fornecido e responda às perguntas relacionadas a ele!",
     level: "Iniciante",
     icon: "📚",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Interpretation.pdf"
   },
   {
@@ -346,7 +358,7 @@ export const learningSheets: Material[] = [
     description: "Revise o quanto você aprendeu sobre tempos verbais até agora!",
     level: "Iniciante",
     icon: "✍️",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Verb Tenses Review.pdf"
   },
   {
@@ -354,7 +366,7 @@ export const learningSheets: Material[] = [
     description: "Produção de texto com os tempos verbais que aprendemos até agora",
     level: "Iniciante",
     icon: "✍️",
-    category: "Escrita",
+    categories: ["Escrita"],
     filePath: "/downloads/Creative Writing.pdf"
   },
   {
@@ -362,7 +374,7 @@ export const learningSheets: Material[] = [
     description: "Expressões idiomáticas sobre comida",
     level: "Iniciante",
     icon: "🍔",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Food Idioms.pdf"
   },
   {
@@ -370,7 +382,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre comida",
     level: "Iniciante",
     icon: "🍔",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Food Vocabulary.pdf"
   },
   {
@@ -378,7 +390,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre adjetivos de personalidade",
     level: "Iniciante",
     icon: "😎",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Personality Adjectives.pdf"
   },
   {
@@ -386,7 +398,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre adjetivos que descrevem emoções",
     level: "Iniciante",
     icon: "😢",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Emotional Adjectives.pdf"
   },
   {
@@ -394,7 +406,7 @@ export const learningSheets: Material[] = [
     description: "Mais uma atividade de compreensão de leitura!",
     level: "Iniciante",
     icon: "📚",
-    category: "Leitura",
+    categories: ["Leitura"],
     filePath: "/downloads/Reading Comprehension 2.pdf"
   },
   {
@@ -402,7 +414,7 @@ export const learningSheets: Material[] = [
     description: "Produção textual com os Personality e Emotional Adjectives que aprendemos nas últimas aulas",
     level: "Iniciante",
     icon: "✍️",
-    category: "Escrita",
+    categories: ["Escrita"],
     filePath: "/downloads/Creative Writing 2.pdf"
   },
   {
@@ -410,7 +422,7 @@ export const learningSheets: Material[] = [
     description: "Identifique a classe gramatical das palavras fornecidas!",
     level: "Iniciante",
     icon: "🔤",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Grammatical Class.pdf"
   },
   {
@@ -418,7 +430,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre o inverno e o verão",
     level: "Iniciante",
     icon: "🌞",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Seasons Vocabulary.pdf"
   },
   {
@@ -426,7 +438,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para o tempo verbal Present Perfect Continuous",
     level: "Iniciante",
     icon: "⏰",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Present Perfect Continuous.pdf"
   },
   {
@@ -434,7 +446,7 @@ export const learningSheets: Material[] = [
     description: "Outra atividade de compreensão de leitura!",
     level: "Iniciante",
     icon: "📚",
-    category: "Leitura",
+    categories: ["Leitura"],
     filePath: "/downloads/Reading Comprehension 3.pdf"
   },
   {
@@ -442,7 +454,7 @@ export const learningSheets: Material[] = [
     description: "Mais uma atividade de compreensão de leitura!",
     level: "Iniciante",
     icon: "📚",
-    category: "Leitura",
+    categories: ["Leitura"],
     filePath: "/downloads/Reading Comprehension 4.pdf"
   },
   {
@@ -450,7 +462,7 @@ export const learningSheets: Material[] = [
     description: "Palavras essenciais e úteis para uso cotidiano!",
     level: "Iniciante",
     icon: "🗣️",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Practice Daily Vocabulary.pdf"
   },
   {
@@ -458,7 +470,7 @@ export const learningSheets: Material[] = [
     description: "Expressões idiomáticas e abreviações comuns!",
     level: "Iniciante",
     icon: "🗣️",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Slang_Abbreviations.pdf"
   },
   {
@@ -466,7 +478,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre viagens e férias",
     level: "Iniciante",
     icon: "🗣️",
-    category: "Vocabulário",
+    categories: ["Vocabulário", "Slides"],
     filePath: "/downloads/Vacation Vocabulary.pdf"
   },
   {
@@ -474,7 +486,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre verbos de ação",
     level: "Iniciante",
     icon: "🏃",
-    category: "Vocabulário",
+    categories: ["Vocabulário", "Slides"],
     filePath: "/downloads/Action Verbs.pdf"
   },
   {
@@ -482,7 +494,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre profissões comuns",
     level: "Iniciante",
     icon: "👩‍⚕️",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Professions Around Us.pdf"
   },
   {
@@ -490,7 +502,7 @@ export const learningSheets: Material[] = [
     description: "Plano de estudo horizontal para organizar seu tempo de aprendizado",
     level: "Iniciante",
     icon: "🗓️",
-    category: "Organização",
+    categories: ["Organização"],
     filePath: "/downloads/study planner horizontal.pdf"
   },
   {
@@ -498,7 +510,7 @@ export const learningSheets: Material[] = [
     description: "Plano de estudo vertical para organizar seu tempo de aprendizado",
     level: "Iniciante",
     icon: "🗓️",
-    category: "Organização",
+    categories: ["Organização"],
     filePath: "/downloads/study planner vertical.pdf"
   },
   {
@@ -506,7 +518,7 @@ export const learningSheets: Material[] = [
     description: "Atividade de interpretação de texto",
     level: "Iniciante",
     icon: "🗓️",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Read, Think & React.pdf"
   },
   {
@@ -514,7 +526,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre o meio ambiente e a sustentabilidade",
     level: "Iniciante",
     icon: "🌱",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Environment and Sustainability.pdf"
   },
   {
@@ -522,7 +534,7 @@ export const learningSheets: Material[] = [
     description: "Vocabulário sobre a família",
     level: "Iniciante",
     icon: "👨‍👩‍👧‍👦",
-    category: "Vocabulário",
+    categories: ["Vocabulário"],
     filePath: "/downloads/Family Vocabulary.pdf"
   },
   {
@@ -530,7 +542,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais para os verbos modais em inglês",
     level: "Iniciante",
     icon: "📝",
-    category: "Gramática",
+    categories: ["Gramática"],
     filePath: "/downloads/Modal Verbs.pdf"
   },
   {
@@ -538,7 +550,7 @@ export const learningSheets: Material[] = [
     description: "Exercício de casa de volta às aulas!",
     level: "Iniciante",
     icon: "📝",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Homework_1.pdf"
   },
   {
@@ -546,7 +558,7 @@ export const learningSheets: Material[] = [
     description: "Regras gramaticais das preposições in, on e at e das preposições de lugar",
     level: "Iniciante",
     icon: "📍",
-    category: "Gramática",
+    categories: ["Gramática", "Slides"],
     filePath: "/downloads/Preposition.pdf"
   },
   {
@@ -554,7 +566,7 @@ export const learningSheets: Material[] = [
     description: "Pratique in, on, at e as preposições de lugar — com gabarito no fim!",
     level: "Iniciante",
     icon: "📍",
-    category: "Atividades",
+    categories: ["Atividades"],
     filePath: "/downloads/Preposition Activity.pdf"
   },
   {
@@ -562,7 +574,7 @@ export const learningSheets: Material[] = [
     description: "A diferença entre adjetivos de personalidade e de emoção, com vocabulário dos dois",
     level: "Iniciante",
     icon: "🎭",
-    category: "Vocabulário",
+    categories: ["Vocabulário", "Slides"],
     filePath: "/downloads/Adjectives.pdf"
   },
 

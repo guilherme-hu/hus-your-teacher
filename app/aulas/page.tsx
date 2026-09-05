@@ -24,14 +24,13 @@ export default function AulasPage() {
       <section className="py-20 px-4 bg-pink-600 vignette text-center">
         <Reveal>
           <Badge className="mb-6 bg-pink-800 text-white border-0 retro-text text-base px-6 py-2">
-            Aulas ao vivo 💻
+            Aulas online ao vivo 💻
           </Badge>
           <h1 className="text-4xl md:text-6xl vintage-heading text-white mb-8">
-            Uma aula por semana, de graça, de onde você estiver 🌎
+            Aulas de inglês gratuitas, toda semana ✏️
           </h1>
           <p className="text-lg md:text-xl text-white retro-text max-w-3xl mx-auto leading-relaxed">
-            Material sozinho não ensina ninguém a falar. Por isso as aulas são ao vivo: dá para
-            perguntar, errar, praticar e ser corrigido por alguém que se importa. 💛
+            O Hu's Your Teacher também oferece suas próprias aulas de inglês! 💛
           </p>
         </Reveal>
       </section>
@@ -40,17 +39,17 @@ export default function AulasPage() {
       <section className="py-24 px-4 bg-green-50/60">
         <div className="container mx-auto max-w-5xl">
           <Reveal className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl vintage-heading text-gray-800 mb-6">
-              Como funcionam as aulas 🗓️
+            <h2 className="text-4xl md:text-5xl vintage-heading text-gray-800">
+              Como funcionam as aulas
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 retro-text max-w-2xl mx-auto">
-              Sem pegadinha, sem letra miúda. É isso aqui:
-            </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* `flex-wrap` em vez de grid: com 5 cards, a última linha do grid ficava
+              encostada à esquerda. Assim ela fica centrada. `sm:w-72` mantém 3 por
+              linha dentro do container de 1024px. */}
+          <div className="flex flex-wrap justify-center gap-8">
             {comoFunciona.map((item) => (
-              <Reveal key={item.titulo}>
+              <Reveal key={item.titulo} className="w-full sm:w-72">
                 <div className="vintage-card playful-card h-full rounded-2xl p-8">
                   <span className="card-emoji mb-3 block text-3xl" aria-hidden="true">
                     {item.icon}

@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/reveal"
+import Image from "next/image"
 import { Award, ClipboardList } from "lucide-react"
-import { sectors } from "@/lib/data/voluntariado"
+import { reuniaoDaEquipe, sectors } from "@/lib/data/voluntariado"
 import { FORMULARIOS, LINK_EXTERNO } from "@/lib/site"
 
 export const metadata = {
@@ -75,6 +76,34 @@ export default function VoluntariadoPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Foto da equipe */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-3xl text-center">
+          <Reveal>
+            <h3 className="text-3xl md:text-4xl vintage-heading text-gray-800 mb-4">
+              Como é por dentro
+            </h3>
+            <p className="text-lg text-gray-600 retro-text mb-10 max-w-xl mx-auto">
+              A equipe se encontra online para planejar, dividir tarefas e acompanhar o que está
+              dando certo.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <figure className="photo-border playful-card mx-auto max-w-2xl overflow-hidden rounded-lg rotate-1">
+              <Image
+                src={reuniaoDaEquipe.src}
+                alt={reuniaoDaEquipe.alt}
+                width={1600}
+                height={1112}
+                sizes="(max-width: 768px) 100vw, 672px"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+            <p className="handwritten mt-5 text-lg text-pink-700">{reuniaoDaEquipe.legenda}</p>
+          </Reveal>
         </div>
       </section>
 

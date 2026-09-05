@@ -65,3 +65,10 @@ export const sectors: Sector[] = [
     borderColor: "border-green-300"
   }
 ]
+
+/** Registro de uma reunião da equipe — usado na página de voluntariado. */
+export const reuniaoDaEquipe = {
+  src: "/voluntariado/reuniao-marketing.jpeg",
+  alt: "Reunião online da equipe de Communication & Marketing, com o perfil do projeto no Instagram compartilhado na tela e as voluntárias na chamada",
+  legenda: "Uma reunião da equipe de Communication & Marketing",
+}
