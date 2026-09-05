@@ -577,6 +577,14 @@ export const learningSheets: Material[] = [
     categories: ["Vocabulário", "Slides"],
     filePath: "/downloads/Adjectives.pdf"
   },
+  {
+    title: "Verbos regulares X Verbos irregulares",
+    description: "A diferença entre verbos regulares e irregulares, com exemplos e exercícios",
+    level: "Iniciante",
+    icon: "📝",
+    categories: ["Gramática"],
+    filePath: "/downloads/Verbos regulares x Verbos irregulares.pdf"
+  },
 
 
 ];
