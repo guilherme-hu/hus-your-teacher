@@ -294,18 +294,15 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={200}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                variant="sunny" size="cta"
-                asChild
-              >
-                <a
-                  href={FORMULARIOS.aluno}
-                  {...LINK_EXTERNO}
-                >
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button variant="sunny" size="cta" asChild>
+                <a href={FORMULARIOS.aluno} {...LINK_EXTERNO}>
                   <Download className="w-5 h-5 mr-3" />
                   Responder ao Formulário de Inscrição 📥
                 </a>
+              </Button>
+              <Button variant="vintage" size="cta" asChild>
+                <Link href="/aulas">💻 Como funcionam as aulas</Link>
               </Button>
             </div>
           </Reveal>
