@@ -26,7 +26,7 @@ const achievementsList = [
     iconColor: "text-pink-700",
     bgClass: "bg-pink-100",
     borderClass: "border-pink-400",
-    value: "1000+",
+    value: "1200+",
     title: "Seguidores",
     description: "Acompanhando o projeto no Instagram"
   },

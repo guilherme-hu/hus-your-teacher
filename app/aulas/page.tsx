@@ -30,7 +30,7 @@ export default function AulasPage() {
             Aulas de inglês gratuitas, toda semana ✏️
           </h1>
           <p className="text-lg md:text-xl text-white retro-text max-w-3xl mx-auto leading-relaxed">
-            O Hu's Your Teacher também oferece suas próprias aulas de inglês! 💛
+            O Hu&apos;s Your Teacher também oferece suas próprias aulas de inglês! 💛
           </p>
         </Reveal>
       </section>
@@ -140,9 +140,9 @@ export default function AulasPage() {
               Não consegue no horário da turma?
             </h2>
             <p className="retro-text mb-6 text-lg md:text-xl leading-relaxed text-gray-700">
-              Também existe o <strong>acompanhamento individual</strong>: uma monitoria remota e
-              assíncrona, para quem não consegue participar das aulas ou quer encarar as atividades
-              mais difíceis sem ficar sem ninguém para tirar dúvidas.
+              Também existe o <strong>acompanhamento individual</strong>: uma monitoria remota e <strong>assíncrona</strong> (via mensagens), para quem não consegue participar das
+              aulas ou quer encarar as atividades mais difíceis sem ficar sem ninguém para tirar
+              dúvidas.
             </p>
             <p className="retro-text text-lg leading-relaxed text-gray-700">
               A gente te encaminha para uma Teacher que responde suas dúvidas sobre lições, slides e

@@ -127,6 +127,14 @@
   letter-spacing: 0.05em;
 }
 
+/* O preflight do Tailwind dá `font-weight: bolder` ao <strong>, e `bolder` é
+   RELATIVO ao pai: como o `.retro-text` é 300, resolvia para 400 e o destaque
+   sumia. Peso absoluto para o negrito voltar a aparecer. */
+.retro-text strong,
+.retro-text b {
+  font-weight: 700;
+}
+
 /* Scrapbook elements */
 .scrapbook-tape {
   position: relative;
