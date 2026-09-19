@@ -593,8 +593,14 @@ export const learningSheets: Material[] = [
     categories: ["Gramática"],
     filePath: "/downloads/Adverbio de causa.pdf"
   },
-
-
+  {
+    title: "Climate, Seasons and Temperature Activity",
+    description: "Relacione estações, clima e temperatura em inglês, com gabarito comentado no fim!",
+    level: "Iniciante",
+    icon: "🌦️",
+    categories: ["Atividades"],
+    filePath: "/downloads/Climate, Seasons and Temperature Activity.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
