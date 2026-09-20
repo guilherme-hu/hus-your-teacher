@@ -189,9 +189,9 @@ export const areas: Area[] = [
     description: "Responsáveis por estabelecer parcerias, engajar a comunidade e expandir o impacto do projeto, conectando pessoas e recursos para fortalecer a missão do Hu's Your Teacher.",
     members: [
         {
-        name: "Valentina C.",
+        name: "Kayra B.",
         role: "Outreach & Community Engagement Member",
-        avatar: "/members/valentina.jpeg",
+        avatar: "/placeholder_profile.jpg",
         icon: "🌟",
         },
        
