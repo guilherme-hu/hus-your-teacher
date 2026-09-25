@@ -601,6 +601,14 @@ export const learningSheets: Material[] = [
     categories: ["Atividades"],
     filePath: "/downloads/Climate, Seasons and Temperature Activity.pdf"
   },
+  {
+    title: "Mixed Conditionals",
+    description: "Condicionais mistas: passado e presente na mesma frase, com atividade em 5 partes e gabarito no fim!",
+    level: "Avançado",
+    icon: "🔀",
+    categories: ["Gramática", "Slides"],
+    filePath: "/downloads/Mixed Conditionals.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
