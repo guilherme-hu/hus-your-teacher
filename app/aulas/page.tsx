@@ -129,7 +129,7 @@ export default function AulasPage() {
         </div>
       </section>
 
-      {/* Acompanhamento individual */}
+      {/* Acompanhamento individual 
       <section className="py-24 px-4 bg-yellow-100/70">
         <div className="container mx-auto max-w-3xl text-center">
           <Reveal>
@@ -153,6 +153,7 @@ export default function AulasPage() {
           </Reveal>
         </div>
       </section>
+      */}
 
       {/* Depoimento */}
       <section className="py-24 px-4 bg-pink-50/60">
