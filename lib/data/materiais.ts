@@ -609,6 +609,14 @@ export const learningSheets: Material[] = [
     categories: ["Gramática", "Slides"],
     filePath: "/downloads/Mixed Conditionals.pdf"
   },
+  {
+    title: "Past Perfect",
+    description: "O passado do passado: como formar e quando usar o Past Perfect, com atividade e gabarito no fim!",
+    level: "Intermediário",
+    icon: "⏪",
+    categories: ["Gramática", "Slides"],
+    filePath: "/downloads/Past Perfect.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
