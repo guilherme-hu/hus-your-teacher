@@ -603,7 +603,7 @@ export const learningSheets: Material[] = [
   },
   {
     title: "Mixed Conditionals",
-    description: "Condicionais mistas: passado e presente na mesma frase, com atividade em 5 partes e gabarito no fim!",
+    description: "Condicionais mistas: passado e presente na mesma frase",
     level: "Avançado",
     icon: "🔀",
     categories: ["Gramática", "Slides"],
@@ -611,11 +611,19 @@ export const learningSheets: Material[] = [
   },
   {
     title: "Past Perfect",
-    description: "O passado do passado: como formar e quando usar o Past Perfect, com atividade e gabarito no fim!",
+    description: "Como formar e usar o Past Perfect",
     level: "Intermediário",
     icon: "⏪",
     categories: ["Gramática", "Slides"],
     filePath: "/downloads/Past Perfect.pdf"
+  },
+  {
+    title: "Halloween Class",
+    description: "Origens do Halloween, vocabulário e modais de dedução no passado",
+    level: "Avançado",
+    icon: "🎃",
+    categories: ["Vocabulário", "Gramática", "Slides"],
+    filePath: "/downloads/Halloween Class.pdf"
   },
 ];
 
