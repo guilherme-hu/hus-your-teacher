@@ -127,6 +127,19 @@ export const areas: Area[] = [
     ],
   },
   {
+    label: "Human Resources",
+    icon: "💛",
+    description: "Responsáveis por fazer a ponte entre os objetivos do projeto e o bem-estar dos colaboradores, assim como o recrutamento de novos voluntários e alunos.",
+    members: [
+        {
+          name: "Matheus",
+          role: "Human Resources Member",
+          avatar: "/members/matheus.jpeg",
+          icon: "🌟",
+        },
+    ],
+  },
+  {
     label: "Communication & Marketing",
     icon: "📣",
     description: "Responsáveis por divulgar o projeto, fortalecer a marca e conectar novas pessoas ao Hu's Your Teacher.",

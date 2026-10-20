@@ -13,7 +13,7 @@ import { CONTATO, LINK_EXTERNO } from "@/lib/site"
 export const metadata = {
   title: "Nossa Equipe",
   description:
-    "Conheça os voluntários por trás do Hu&apos;s Your Teacher — Teaching, Curriculum Development, Communication & Marketing e Outreach.",
+    "Conheça os voluntários por trás do Hu&apos;s Your Teacher — Teaching, Curriculum Development, Human Resources, Communication & Marketing e Outreach.",
 }
 
 
