@@ -132,7 +132,7 @@ export const areas: Area[] = [
     description: "Responsáveis por fazer a ponte entre os objetivos do projeto e o bem-estar dos colaboradores, assim como o recrutamento de novos voluntários e alunos.",
     members: [
         {
-          name: "Matheus",
+          name: "Matheus R.",
           role: "Human Resources Member",
           avatar: "/members/matheus.jpeg",
           icon: "🌟",
