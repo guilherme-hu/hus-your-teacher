@@ -625,14 +625,6 @@ export const learningSheets: Material[] = [
     categories: ["Vocabulário", "Gramática", "Slides"],
     filePath: "/downloads/Halloween Class.pdf"
   },
-  {
-    title: "Who Pays?",
-    description: "Expressões em inglês para falar de dinheiro no dia a dia",
-    level: "Intermediário",
-    icon: "💰",
-    categories: ["Vocabulário"],
-    filePath: "/downloads/Who Pays.pdf"
-  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
