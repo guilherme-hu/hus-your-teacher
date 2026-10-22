@@ -633,6 +633,14 @@ export const learningSheets: Material[] = [
     categories: ["Vocabulário"],
     filePath: "/downloads/Who Pays.pdf"
   },
+  {
+    title: "Past Simple & Present Perfect",
+    description: "Quando usar Past Simple ou Present Perfect",
+    level: "Intermediário",
+    icon: "⚖️",
+    categories: ["Gramática", "Slides"],
+    filePath: "/downloads/Past Simple & Present Perfect Lesson.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
