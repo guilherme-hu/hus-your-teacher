@@ -52,9 +52,10 @@ export type Turma = {
   nivel: string
 }
 
-/** Turmas em andamento. Mantenha em sincronia com a seção CTA da home. */
 export const turmas: Turma[] = [
+  { nome: "Turma Básico I", dia: "Segunda-feira", horario: "13:00 - 14:00", nivel: "Iniciante" },
   { nome: "Turma Básico I", dia: "Quarta-feira", horario: "17:00 - 18:00", nivel: "Iniciante" },
+  { nome: "Turma Intermediário I", dia: "Sábado", horario: "15:00 - 16:00", nivel: "Intermediário" },
 ]
 
 export type Foto = {
@@ -125,7 +126,7 @@ export const faq: Pergunta[] = [
   {
     pergunta: "Só existem turmas de nível básico?",
     resposta:
-      "Por enquanto sim, só oferecemos aulas para níveis básicos de fluência. Criar turmas para níveis mais avançados está nos planos para o futuro!",
+      "Não! Além das turmas de Básico I, agora temos uma turma de Intermediário I, aos sábados. Turmas para níveis mais avançados estão nos planos para o futuro!",
   },
 ]
 

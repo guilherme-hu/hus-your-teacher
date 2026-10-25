@@ -76,7 +76,7 @@ export default function AulasPage() {
           <Reveal delay={120}>
             <ul className="flex flex-col items-center gap-6">
               {turmas.map((turma) => (
-                <li key={turma.nome} className="w-full max-w-md">
+                <li key={`${turma.nome}-${turma.dia}`} className="w-full max-w-md">
                   <div className="vintage-card playful-card scrapbook-tape rounded-2xl border-2 border-pink-300 p-8">
                     <div className="mb-3 flex items-center justify-center gap-3">
                       <Clock className="h-6 w-6 shrink-0 text-pink-600" />

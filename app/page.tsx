@@ -16,6 +16,7 @@ import { CountUp } from "@/components/count-up"
 import { CartaoAcesso } from "@/components/cartao-acesso"
 import { downloadHref, featuredSheets } from "@/lib/data/materiais"
 import { coreTeam } from "@/lib/data/equipe"
+import { turmas } from "@/lib/data/aulas"
 import { FORMULARIOS, LINK_EXTERNO } from "@/lib/site"
 
 
@@ -290,7 +291,11 @@ export default function HomePage() {
           <Reveal delay={120}>
             <div className="inline-block vintage-card rounded-2xl px-8 py-6 mb-12">
               <p className="text-lg vintage-heading text-gray-800 mb-3">Horários de aula 🕐</p>
-              <p className="text-lg text-gray-700 retro-text">Turma Básico I — Quarta-feira, 17:00–18:00</p>
+              {turmas.map((turma) => (
+                <p key={`${turma.nome}-${turma.dia}`} className="text-lg text-gray-700 retro-text">
+                  {turma.nome} — {turma.dia}, {turma.horario}
+                </p>
+              ))}
             </div>
           </Reveal>
           <Reveal delay={200}>
