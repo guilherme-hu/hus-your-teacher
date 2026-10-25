@@ -54,7 +54,7 @@ export type Turma = {
 
 export const turmas: Turma[] = [
   { nome: "Turma Básico I", dia: "Segunda-feira", horario: "13:00 - 14:00", nivel: "Iniciante" },
-  { nome: "Turma Básico I", dia: "Quarta-feira", horario: "17:00 - 18:00", nivel: "Iniciante" },
+  { nome: "Turma Básico II", dia: "Quarta-feira", horario: "17:00 - 18:00", nivel: "Iniciante" },
   { nome: "Turma Intermediário I", dia: "Sábado", horario: "15:00 - 16:00", nivel: "Intermediário" },
 ]
 
