@@ -633,6 +633,14 @@ export const learningSheets: Material[] = [
     categories: ["Vocabulário"],
     filePath: "/downloads/Who Pays.pdf"
   },
+  {
+    title: "My Plans for Next Year",
+    description: "Planos e intenções para o próximo ano com be going to",
+    level: "Iniciante",
+    icon: "🎯",
+    categories: ["Vocabulário", "Gramática"],
+    filePath: "/downloads/My Plans for Next Year.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
