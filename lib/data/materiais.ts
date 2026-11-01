@@ -627,7 +627,7 @@ export const learningSheets: Material[] = [
   },
   {
     title: "Who Pays?",
-    description: "Expressões em inglês para falar de dinheiro no dia a dia",
+    description: "Expressões para falar de dinheiro no dia a dia",
     level: "Intermediário",
     icon: "💰",
     categories: ["Vocabulário"],
