@@ -641,6 +641,22 @@ export const learningSheets: Material[] = [
     categories: ["Vocabulário", "Gramática"],
     filePath: "/downloads/My Plans for Next Year.pdf"
   },
+  {
+    title: "Animal Habitats",
+    description: "Onde cada animal vive, da floresta à região polar",
+    level: "Iniciante",
+    icon: "🌳",
+    categories: ["Vocabulário", "Slides"],
+    filePath: "/downloads/Animal Habitats.pdf"
+  },
+  {
+    title: "Thanksgiving",
+    description: "Palavras do Thanksgiving e como dizer pelo que você é grato",
+    level: "Iniciante",
+    icon: "🦃",
+    categories: ["Vocabulário", "Slides"],
+    filePath: "/downloads/Thanksgiving.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
