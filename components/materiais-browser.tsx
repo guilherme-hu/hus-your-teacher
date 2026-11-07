@@ -105,7 +105,7 @@ export function MateriaisBrowser() {
                   <Card className="vintage-card scrapbook-tape playful-card hover:shadow-xl h-full">
                     <CardHeader className="relative">
                       <div className="flex items-center justify-between mb-3">
-                        <div className="flex gap-2">
+                        <div className="flex flex-wrap gap-2">
                           <Badge variant="secondary" className="text-xs bg-yellow-100 text-gray-700 retro-text">
                             {sheet.level}
                           </Badge>
