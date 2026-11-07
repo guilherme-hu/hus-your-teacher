@@ -657,6 +657,38 @@ export const learningSheets: Material[] = [
     categories: ["Vocabulário", "Slides"],
     filePath: "/downloads/Thanksgiving.pdf"
   },
+  {
+    title: "Possessive Adjectives",
+    description: "Como usar my, your, his, her e os outros possessivos",
+    level: "Iniciante",
+    icon: "🏷️",
+    categories: ["Gramática"],
+    filePath: "/downloads/Possessive Adjectives.pdf"
+  },
+  {
+    title: "Let's Make Plans!",
+    description: "Present continuous para falar de compromissos futuros",
+    level: "Iniciante",
+    icon: "📅",
+    categories: ["Gramática", "Vocabulário"],
+    filePath: "/downloads/Let's Make Plans.pdf"
+  },
+  {
+    title: "Focus and Concentration",
+    description: "Como manter o foco, com interpretação e if conditionals",
+    level: "Intermediário",
+    icon: "🧠",
+    categories: ["Leitura", "Escrita", "Gramática", "Slides"],
+    filePath: "/downloads/Focus and Concentration.pdf"
+  },
+  {
+    title: "Passive Voice",
+    description: "Voz passiva: como formar e quando usar",
+    level: "Intermediário",
+    icon: "🔄",
+    categories: ["Gramática", "Slides"],
+    filePath: "/downloads/Passive Voice.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
