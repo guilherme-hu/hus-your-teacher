@@ -659,7 +659,7 @@ export const learningSheets: Material[] = [
   },
   {
     title: "Possessive Adjectives",
-    description: "Como usar my, your, his, her e os outros possessivos",
+    description: "Uso de pronomes possessivos e atividades para praticar",
     level: "Iniciante",
     icon: "🏷️",
     categories: ["Gramática"],
@@ -675,7 +675,7 @@ export const learningSheets: Material[] = [
   },
   {
     title: "Focus and Concentration",
-    description: "Como manter o foco, com interpretação e if conditionals",
+    description: "Leitura sobre foco, com atividades de interpretação e if conditionals",
     level: "Intermediário",
     icon: "🧠",
     categories: ["Leitura", "Escrita", "Gramática", "Slides"],
@@ -683,7 +683,7 @@ export const learningSheets: Material[] = [
   },
   {
     title: "Passive Voice",
-    description: "Voz passiva: como formar e quando usar",
+    description: "Voz passiva: como e quando usar!",
     level: "Intermediário",
     icon: "🔄",
     categories: ["Gramática", "Slides"],
