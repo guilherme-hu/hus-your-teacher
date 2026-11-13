@@ -88,9 +88,21 @@ export const areas: Area[] = [
         icon: "🌟",
       },
       {
+        name: "Aléxia M.",
+        role: "Teacher",
+        avatar: "/members/alexia.jpeg",
+        icon: "🌟",
+      },
+      {
         name: "Lina M.",
         role: "Teacher",
         avatar: "/placeholder_profile.jpg",
+        icon: "🌟",
+      },
+      {
+        name: "Luís Felipe",
+        role: "Teacher",
+        avatar: "/members/luisfelipe.jpeg",
         icon: "🌟",
       },
     ],
@@ -169,9 +181,9 @@ export const areas: Area[] = [
         description: "Cuidam da divulgação do projeto nas redes sociais e do design visual da marca, ampliando o alcance do Hu's Your Teacher.",
         members: [
           {
-            name: "Brenda T.",
-            role: "Communication & Marketing Honorary Member and Advisor",
-            avatar: "/members/brenda.jpeg",
+            name: "Maria Brenda",
+            role: "Content Creator",
+            avatar: "/members/mariabrenda.jpeg",
             icon: "🌟",
           },
         ],
@@ -187,15 +199,15 @@ export const areas: Area[] = [
             icon: "🌟",
           },
           {
-            name: "Tamires F.",
+            name: "Eduarda S.",
             role: "Ambassador",
-            avatar: "/members/tamires.jpeg",
+            avatar: "/members/eduarda.jpeg",
             icon: "🌟",
           },
           {
-            name: "Thayllane B.",
+            name: "Tamires F.",
             role: "Ambassador",
-            avatar: "/members/thayllane.jpeg",
+            avatar: "/members/tamires.jpeg",
             icon: "🌟",
           },
           {
