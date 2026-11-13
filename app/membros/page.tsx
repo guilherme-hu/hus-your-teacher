@@ -29,7 +29,7 @@ function MemberCard({ member }: { member: Member }) {
             alt={member.name}
             width={112}
             height={112}
-            className="rounded-full object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="flex items-center justify-center gap-2 mb-1">
