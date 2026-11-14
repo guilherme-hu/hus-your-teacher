@@ -689,6 +689,46 @@ export const learningSheets: Material[] = [
     categories: ["Gramática", "Slides"],
     filePath: "/downloads/Passive Voice.pdf"
   },
+  {
+    title: "The Mystery of the Missing Puppy",
+    description: "História de um filhote sumido para leitura e interpretação",
+    level: "Iniciante",
+    icon: "🐶",
+    categories: ["Leitura"],
+    filePath: "/downloads/The Mystery of the Missing Puppy.pdf"
+  },
+  {
+    title: "Lucky or Unlucky?",
+    description: "Expressões sobre sorte e superstições da sexta-feira 13",
+    level: "Iniciante",
+    icon: "🍀",
+    categories: ["Vocabulário", "Leitura"],
+    filePath: "/downloads/Lucky or Unlucky.pdf"
+  },
+  {
+    title: "Places in Town",
+    description: "Lugares da cidade e o que fazer em cada um",
+    level: "Iniciante",
+    icon: "🏙️",
+    categories: ["Vocabulário", "Leitura"],
+    filePath: "/downloads/Places in Town.pdf"
+  },
+  {
+    title: "Rio de Janeiro",
+    description: "Leitura sobre o Rio e palavras com ch e sh",
+    level: "Iniciante",
+    icon: "🏖️",
+    categories: ["Leitura", "Escrita"],
+    filePath: "/downloads/Rio de Janeiro.pdf"
+  },
+  {
+    title: "My Daily Routine",
+    description: "Rotina diária com advérbios de frequência",
+    level: "Iniciante",
+    icon: "⏰",
+    categories: ["Leitura", "Gramática"],
+    filePath: "/downloads/My Daily Routine.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
