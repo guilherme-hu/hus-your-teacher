@@ -119,12 +119,6 @@ export const areas: Area[] = [
         icon: "🌟",
         },
         {
-        name: "Isabele A.",
-        role: "Curriculum Development Member",
-        avatar: "/members/isabele.jpeg",
-        icon: "🌟",
-        },
-        {
         name: "Juliana L.",
         role: "Curriculum Development Member and Consultant",
         avatar: "/members/juliana.jpeg",
