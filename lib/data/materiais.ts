@@ -729,6 +729,14 @@ export const learningSheets: Material[] = [
     categories: ["Leitura", "Gramática"],
     filePath: "/downloads/My Daily Routine.pdf"
   },
+  {
+    title: "Comparatives & Superlatives",
+    description: "Como formar e usar comparativos e superlativos",
+    level: "Iniciante",
+    icon: "⚖️",
+    categories: ["Gramática", "Atividades", "Slides"],
+    filePath: "/downloads/Comparatives and Superlatives.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
