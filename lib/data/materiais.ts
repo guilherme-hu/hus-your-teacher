@@ -737,6 +737,22 @@ export const learningSheets: Material[] = [
     categories: ["Gramática", "Atividades", "Slides"],
     filePath: "/downloads/Comparatives and Superlatives.pdf"
   },
+  {
+    title: "What Will Happen Next?",
+    description: "Expressões e previsões sobre o futuro com will e might",
+    level: "Intermediário",
+    icon: "🔮",
+    categories: ["Vocabulário", "Gramática", "Leitura"],
+    filePath: "/downloads/What Will Happen Next.pdf"
+  },
+  {
+    title: "Let's Write",
+    description: "Como escrever frases completas e usar conectores",
+    level: "Iniciante",
+    icon: "✍️",
+    categories: ["Escrita"],
+    filePath: "/downloads/Let's Write.pdf"
+  },
 ];
 
 /** A amostra que a home exibe. Controlada pelo `featured` de cada material. */
